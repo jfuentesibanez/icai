@@ -120,11 +120,12 @@ def chart_svg(s):
     W, H = 1060, 440
     L, R, T, B = 96, 210, 28, 52          # plot margins: room for y labels and end labels
     ys, ser, hl = s['years'], s['series'], s['highlight']
-    top = max(max(v) for v in ser.values()); ymax = ((top // 50000) + 1) * 50000
+    top = max(max(v) for v in ser.values()); rnd, step = s.get('round', 50000), s.get('grid', 100000)
+    ymax = int((top // rnd) + 1) * rnd
     px = lambda i: L + i * (W - L - R) / (len(ys) - 1)
     py = lambda v: T + (H - T - B) * (1 - v / ymax)
     o = [f'<svg class="chart" viewBox="0 0 {W} {H}" role="img" aria-label="{html.escape(s["title"])}">']
-    for g in range(0, ymax + 1, 100000):           # recessive grid + y labels
+    for g in range(0, ymax + 1, step):           # recessive grid + y labels
         y = py(g)
         o.append(f'<line x1="{L}" y1="{y:.1f}" x2="{W-R}" y2="{y:.1f}" class="grid"/>')
         o.append(f'<text x="{L-14}" y="{y+5:.1f}" class="ax" text-anchor="end">{g:,}</text>')

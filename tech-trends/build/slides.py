@@ -207,11 +207,50 @@ dict(kind="bullets", act="Infrastructure", title="28 April 2025: Spain and Portu
 # V. Money and life
 dict(kind="anchor", act="Money and life", kicker="Trend 12 · Fintech and stablecoins",
      text="Money that moves like a message."),
+dict(kind="video", act="Money and life", slug="stripe-stablecoins", vid="H4eWjC_nXcw",
+     title="Stripe: what is a stablecoin?", label="Stripe Developers · official video · September 2025 · excerpt"),
+dict(kind="chart", act="Money and life", title="Dollar stablecoins in circulation, $ billion",
+     years=list(range(2020, 2027)), highlight="Stablecoins", round=50, grid=100,
+     series={"Stablecoins": [4.2, 27.4, 161.9, 137.4, 129.8, 204.8, 305.9]},
+     note="$306 billion in January 2026, eleven times January 2021",
+     src="DefiLlama, stablecoins in circulation pegged to the US dollar, 1 January of each year"),
+dict(kind="bullets", act="Money and life", title="Blockchain, without the hype", items=[
+  "2021 in this class: NFTs and DeFi",
+  "2025: first US law for stablecoins, the GENIUS Act",
+  "Stripe paid $1.1 billion for Bridge, a stablecoin startup from 2022",
+  "your question: which payment is still slow and expensive?"],
+  src="White House, 18 Jul 2025; TechCrunch, 5 Feb 2025"),
+
 dict(kind="anchor", act="Money and life", kicker="Trend 13 · Biotech",
      text="Biology becomes an engineering problem."),
+dict(kind="video", act="Money and life", slug="alphafold", vid="r4-hXO7MLVU",
+     title="AlphaFold: a 50-year problem solved by AI", label="Google DeepMind · official video · 2025"),
+dict(kind="data", act="Money and life", figure="200 million",
+     cap="protein structures AlphaFold2 predicted: almost all known proteins. Nobel Prize in Chemistry, 2024.",
+     src="Nobel Prize press release, 9 Oct 2024"),
+dict(kind="video", act="Money and life", slug="vertex-casgevy", vid="NL6iYtyI7Vw",
+     title="Casgevy: the first medicine made with CRISPR",
+     label="Vertex Pharmaceuticals · official video · December 2025"),
+dict(kind="bullets", act="Money and life", title="From the laboratory to the patient", items=[
+  "Casgevy: first CRISPR therapy, approved in the UK in November 2023",
+  "it edits the patient's own cells to treat sickle cell disease",
+  "startup: Isomorphic Labs, DeepMind's spin-off, raised $600M in 2025",
+  "your question: which other hard problem could AI make faster?"],
+  src="Vertex, 16 Nov 2023; Isomorphic Labs, 31 Mar 2025"),
 
 # VI. Your turn
-dict(kind="anchor", act="Your turn", text="A trend is not a business. Where is the opportunity?"),
+dict(kind="bullets", act="Your turn", title="What the failures teach us", items=[
+  "Dash and Amazon Go: the technology worked, the numbers did not",
+  "Humane: a new device needs a strong reason to change habits",
+  "iRobot: being first did not protect it from cheaper competitors",
+  "a trend gives you the timing, not the business model"]),
+dict(kind="bullets", act="Your turn", title="Your turn: 15 minutes, groups of four", items=[
+  "choose one of the thirteen trends",
+  "choose one problem you know well from your own field",
+  "write it down: who pays, and why now?",
+  "two minutes per group to present it"]),
+dict(kind="anchor", act="Your turn", wide=True,
+     text="In five years, some of today's examples will be dead too.<br>Build one that is not."),
 
 dict(kind="close", title="Thank you", mail="javier@ncompany.es", who="Javier Fuentes Ibáñez", org="NCompany"),
 ]
