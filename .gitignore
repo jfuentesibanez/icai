@@ -7,3 +7,8 @@ video/*.f*.mp4
 video/*.f*.m4a
 slides-review.md
 richie-prompt.md
+
+# Videos stay on the local disk only: the public repo must not redistribute third-party clips.
+# Online, the deck plays them from YouTube (vid/start/end in slides.py).
+*/video/*.mp4
+*/video/*.webm
