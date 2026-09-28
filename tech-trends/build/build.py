@@ -51,11 +51,10 @@ def rail(act):
     spans = ''.join(f'<span class="{"cur" if a == act else ""}" data-go="{i}">{a}</span>'
                     for a, i in ACTS)
     return f'<nav class="rail" aria-label="Sections">{spans}</nav>'
-LOGO = ('<div class="logorow">'
-        '<div class="lg lg-cdp" role="img" aria-label="CDP"></div>'
-        '<span class="lg-rule"></span>'
-        '<div class="lg lg-hs" role="img" aria-label="Headspring Executive Development"></div>'
-        '</div>')
+_lg = ([] if LOGO_CDP == 'none' else ['<div class="lg lg-cdp" role="img" aria-label="Logo"></div>']) + \
+      ([] if LOGO_HS  == 'none' else ['<div class="lg lg-hs" role="img" aria-label="Logo"></div>'])
+LOGO = ('<div class="logorow' + (' solo' if len(_lg) == 1 else '') + '">'
+        + '<span class="lg-rule"></span>'.join(_lg) + '</div>')
 FOOTLOGO = '<span class="foot-logo" aria-hidden="true"></span>' if (LOGODIR / 'right.png').exists() else ''
 
 
@@ -434,6 +433,7 @@ footer{position:absolute;left:84px;right:84px;bottom:30px;display:flex;
 .lg-cdp{width:79px;height:44px;background-image:var(--logo-cdp)}
 .lg-hs{width:171px;height:51px;background-image:var(--logo-hs)}
 .lg-rule{width:1px;height:38px;background:var(--line)}
+.solo .lg-hs{width:240px;height:78px}
 .foot-logo{display:inline-block;width:62px;height:19px;margin-right:13px;
   background:var(--logo-hs) left center/contain no-repeat;opacity:.9}
 .dark .foot-logo{background-image:var(--logo-hs-dark);opacity:.95}

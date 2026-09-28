@@ -1,7 +1,8 @@
 # ICAI — Javier's university class decks
 
 Javier Fuentes Ibáñez (NCompany) teaches at ICAI (Universidad Pontificia Comillas). Every class
-deck lives here, one dated subfolder per class (`2026-09-28/`, later `YYYY-MM-DD-topic/`), all in
+deck lives here, one subfolder per class (`YYYY-MM-DD-topic/`; a class taught every year, like `tech-trends/`,
+is named by topic and shows the academic year), all in
 one git repo. Each subfolder is self-contained, with its own copy of the engine, so an old class
 still builds exactly as it was taught.
 

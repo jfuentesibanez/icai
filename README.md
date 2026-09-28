@@ -1,13 +1,14 @@
 # ICAI — class decks
 
-One folder per class, named by date (`YYYY-MM-DD`, plus a topic once there is one).
+One folder per class. A one-off class is named by date (`YYYY-MM-DD-topic`); a class taught
+again every year is named by topic (`tech-trends/`) and shows the academic year instead of a day.
 Each folder is self-contained: `build/slides.py` holds the content, `build/build.py` the engine
 (the same one as the CDP robotics keynote, September 2026), and `python3 build.py` inside `build/`
 writes the deck next to it.
 
 ```
 icai/
-  2026-09-28/        first class
+  tech-trends/       Tech Trends (Entrepreneurship & Innovation), taught every year
     build/           slides.py, build.py, prepare-media.py, photos/, maps/, poster/, logos/
     img/  video/     animated illustrations and clips for that class
 ```
