@@ -16,21 +16,7 @@ dict(kind="cover", title="Tech<br>Trends", who="Javier Fuentes Ibáñez",
 
 dict(kind="agenda", act="Opening", title="Today"),
 
-# I. Opening: the 2021 map, and what is still alive
-dict(kind="bullets", act="Opening", title="My 2021 map: nine trends", art="map2021", items=[
-  "IoT, augmented reality, blockchain",
-  "hyper-personalization, AI, big data",
-  "fintech, 3D printing, robotics",
-  "five years later: which examples are still alive?"],
-  src="Tech Trends class, ICAI, 2021"),
-
-dict(kind="bullets", act="Opening", title="Two 2021 examples that did not survive", items=[
-  "Amazon Dash buttons: sales stopped in February 2019",
-  "Amazon Go: all stores in the US and UK closed in 2026",
-  "Amazon: no &ldquo;right economic model&rdquo; for large-scale expansion",
-  "the technology worked; the business did not"],
-  src="Engadget, 1 Mar 2019 (Dash); aboutamazon.com, 27 Jan 2026 (Fresh and Go)"),
-
+# I. Opening
 dict(kind="anchor", act="Opening", wide=True,
      text="A trend is not a business.<br>For each trend today, we look for the business."),
 
@@ -121,7 +107,7 @@ dict(kind="data", act="Machines", figure="22,000",
      src="Counterpoint Research, 20 Aug 2026"),
 dict(kind="video", act="Machines", slug="bmw-figure", vid="xLVm-QKEZSI",
      title="Figure 02 at BMW: one task, one factory", label="BMW Group · official video · August 2024"),
-dict(kind="bullets", act="Machines", title="The Roomba from my 2021 map", items=[
+dict(kind="bullets", act="Machines", title="A robot pioneer goes bankrupt", items=[
   "iRobot, maker of the Roomba, filed for bankruptcy in December 2025",
   "cheaper Chinese competitors, plus US import taxes",
   "its own Chinese manufacturer, Picea, takes over the company",
@@ -152,7 +138,7 @@ dict(kind="data", act="Machines", figure="20 &rarr; 1",
 dict(kind="video", act="Machines", slug="icon-wolf-ranch", vid="k0REJf3rv44",
      title="ICON: 100 printed houses in Texas", label="ICON · official video · 2023"),
 dict(kind="bullets", act="Machines", title="From prototype to production", items=[
-  "2021 in this class: printed trainers and prototypes",
+  "before: 3D printing was mostly for prototypes",
   "today: engine parts, car frames and houses",
   "startups: Divergent (cars, aerospace) and ICON (houses)",
   "your question: which part in your project has too many pieces?"],
@@ -215,11 +201,11 @@ dict(kind="chart", act="Money and life", title="Dollar stablecoins in circulatio
      note="$306 billion in January 2026, eleven times January 2021",
      src="DefiLlama, stablecoins in circulation pegged to the US dollar, 1 January of each year"),
 dict(kind="bullets", act="Money and life", title="Blockchain, without the hype", items=[
-  "2021 in this class: NFTs and DeFi",
+  "stablecoins: digital dollars, backed one to one by reserves",
   "2025: first US law for stablecoins, the GENIUS Act",
   "Stripe paid $1.1 billion for Bridge, a stablecoin startup from 2022",
   "your question: which payment is still slow and expensive?"],
-  src="White House, 18 Jul 2025; TechCrunch, 5 Feb 2025"),
+  src="White House and GENIUS Act, 18 Jul 2025; TechCrunch, 5 Feb 2025"),
 
 dict(kind="anchor", act="Money and life", kicker="Trend 13 · Biotech",
      text="Biology becomes an engineering problem."),
@@ -240,17 +226,18 @@ dict(kind="bullets", act="Money and life", title="From the laboratory to the pat
 
 # VI. Your turn
 dict(kind="bullets", act="Your turn", title="What the failures teach us", items=[
-  "Dash and Amazon Go: the technology worked, the numbers did not",
+  "Amazon Go, closed in 2026: the technology worked, the numbers did not",
   "Humane: a new device needs a strong reason to change habits",
   "iRobot: being first did not protect it from cheaper competitors",
-  "a trend gives you the timing, not the business model"]),
+  "a trend gives you the timing, not the business model"],
+  src="aboutamazon.com, 27 Jan 2026; TechCrunch, 18 Feb 2025; Manufacturing Dive, 15 Dec 2025"),
 dict(kind="bullets", act="Your turn", title="Your turn: 15 minutes, groups of four", items=[
   "choose one of the thirteen trends",
   "choose one problem you know well from your own field",
   "write it down: who pays, and why now?",
   "two minutes per group to present it"]),
 dict(kind="anchor", act="Your turn", wide=True,
-     text="In five years, some of today's examples will be dead too.<br>Build one that is not."),
+     text="Some of today's examples will fail.<br>Build one that does not."),
 
 dict(kind="close", title="Thank you", mail="javier@ncompany.es", who="Javier Fuentes Ibáñez", org="NCompany"),
 ]
