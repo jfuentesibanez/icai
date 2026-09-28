@@ -161,10 +161,48 @@ dict(kind="bullets", act="Machines", title="From prototype to production", items
 # IV. Infrastructure
 dict(kind="anchor", act="Infrastructure", kicker="Trend 9 · Chips",
      text="Every trend in this class runs on a chip."),
+dict(kind="video", act="Infrastructure", slug="asml-high-na", vid="h_zgURwr6nA",
+     title="ASML: the machine that prints chips", label="ASML · official video · June 2024"),
+dict(kind="data", act="Infrastructure", figure="13.5 nm",
+     cap="the wavelength of the light in ASML's EUV machines: almost x-rays. The technology is unique to ASML.",
+     src="ASML, EUV lithography systems"),
+dict(kind="bullets", act="Infrastructure", title="One machine, one company", items=[
+  "ASML is Dutch: 2025 sales of €32.7 billion",
+  "the most advanced chips are made with its EUV machines",
+  "one supplier means a risk for every chip maker",
+  "your question: what can a startup build around this machine?"],
+  src="ASML, Q4 2025 results, 28 Jan 2026; ASML website"),
+
 dict(kind="anchor", act="Infrastructure", kicker="Trend 10 · Space and satellites",
      text="Your phone talks directly to a satellite."),
+dict(kind="video", act="Infrastructure", slug="t-satellite", vid="HLw6ZovMpLI",
+     title="T-Satellite: no signal, no problem", label="T-Mobile · official video · February 2025"),
+dict(kind="data", act="Infrastructure", figure="657",
+     cap="Starlink satellites that work as mobile phone towers in space. Normal phones connect with no extra equipment.",
+     src="T-Mobile Newsroom, July 2025"),
+dict(kind="video", act="Infrastructure", slug="sateliot", vid="hVC-1yhzmbk",
+     title="Sateliot: 5G satellites from Barcelona", label="Sateliot · official video · November 2025"),
+dict(kind="bullets", act="Infrastructure", title="Two ways into space", items=[
+  "SpaceX and T-Mobile: text messages and apps for people",
+  "Sateliot (Barcelona): 5G satellites for sensors and machines",
+  "Sateliot opened Europe's first 5G satellite centre in November 2025",
+  "your question: what needs a connection where there is no mobile tower?"],
+  src="T-Mobile Newsroom, 2025; Sateliot, 2025"),
+
 dict(kind="anchor", act="Infrastructure", kicker="Trend 11 · Energy and climate",
      text="Cheaper batteries change what we can electrify."),
+dict(kind="video", act="Infrastructure", slug="catl-shenxing", vid="Z75mVvU7MPQ",
+     title="CATL: a full charge in six minutes",
+     label="CATL · official video · April 2026 · excerpt · figures from CATL"),
+dict(kind="data", act="Infrastructure", figure="$108",
+     cap="average price of one kWh of lithium-ion battery pack in 2025, 8% lower than in 2024. For grid storage: $70.",
+     src="BloombergNEF battery price survey, Dec 2025"),
+dict(kind="bullets", act="Infrastructure", title="28 April 2025: Spain and Portugal go dark", items=[
+  "continental Spain and Portugal lost all electric power",
+  "cause: problems with voltage control, not renewables as such",
+  "more solar power needs more control and more storage",
+  "an opportunity for engineers: batteries, inverters, grid software"],
+  src="ENTSO-E expert panel, final report, 20 Mar 2026"),
 
 # V. Money and life
 dict(kind="anchor", act="Money and life", kicker="Trend 12 · Fintech and stablecoins",
