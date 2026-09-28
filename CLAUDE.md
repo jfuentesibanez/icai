@@ -73,5 +73,7 @@ silent one added, or some browsers pause it. GitHub rejects files over 100 MiB.
 
 ## Publishing
 
-GitHub Pages serves a repo's `main` branch. A cached old version is the browser, not the
-deploy: Cmd+Shift+R. The repo must be public for free Pages, and it would carry the video copies.
+GitHub Pages serves `main` (repo `jfuentesibanez/icai`, public). A cached old version is the
+browser, not the deploy: Cmd+Shift+R. Video files never go in the repo (third-party clips in a
+public repo): they are git-ignored, live only on this disk, and online the deck falls back to
+YouTube with the slide's `start`/`end`. Give every excerpt `start`/`end` in seconds.

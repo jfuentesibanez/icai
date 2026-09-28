@@ -15,3 +15,11 @@ icai/
 
 To start a new class, copy the most recent class folder, empty `build/slides.py` down to the
 cover and close, and clear `img/`, `video/`, `build/poster/` and `build/photos/`.
+
+## Publishing
+
+The repo is public and served by GitHub Pages; the site root lists the classes.
+Video files are **not** in the repo (`.gitignore`): they stay in each class's `video/`
+folder on the local disk. Opened from disk or a local server, the deck plays them offline;
+opened from GitHub Pages, it plays the same clip from YouTube, cut with `start`/`end`
+from `slides.py`. Re-download a lost clip from its `vid` with the yt-dlp line in CLAUDE.md.
