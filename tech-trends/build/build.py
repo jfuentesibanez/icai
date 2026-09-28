@@ -211,7 +211,8 @@ def render(s, i):
         vid  = s.get('vid', '')
         link = s.get('link') or ('https://www.youtube.com/watch?v=' + vid)
         ltxt = 'open on youtube &#8599;' if vid else 'open the source page &#8599;'
-        body = (f'<div class="vwrap" data-vid="{vid}" data-link="{link}" data-slug="{s["slug"]}">'
+        body = (f'<div class="vwrap" data-vid="{vid}" data-link="{link}" data-slug="{s["slug"]}"'
+                f' data-start="{s.get("start", "")}" data-end="{s.get("end", "")}">'
                 f'<h2>{s["title"]}</h2>'
                 f'<div class="vstage">'
                 f'<video class="vplayer" playsinline preload="metadata">'
@@ -571,7 +572,8 @@ function playVideo(w){
     f.className='ytframe';f.allow='autoplay; encrypted-media; fullscreen; picture-in-picture';
     f.allowFullscreen=true;f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0';
     f.addEventListener('load',()=>{ok=true});
-    f.src='https://www.youtube-nocookie.com/embed/'+w.dataset.vid+'?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+    f.src='https://www.youtube-nocookie.com/embed/'+w.dataset.vid+'?autoplay=1&rel=0&modestbranding=1&playsinline=1'
+      +(w.dataset.start?'&start='+w.dataset.start:'')+(w.dataset.end?'&end='+w.dataset.end:'');
     stage.classList.remove('noclip'); stage.classList.add('playing'); stage.appendChild(f);
     w.querySelector('.play').style.display='none';
     w.querySelector('.vhint').textContent='youtube player · esc stop';

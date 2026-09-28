@@ -25,7 +25,7 @@ dict(kind="anchor", act="Intelligence", kicker="Trend 1 · Generative AI and age
      text="Software that writes, talks and acts for you."),
 dict(kind="video", act="Intelligence", slug="lovable", vid="xhW9up0Gi2E",
      title="Lovable: an app from one sentence", label="Lovable · official video · 2024"),
-dict(kind="video", act="Intelligence", slug="claude-code", vid="AJpK3YTTKZ4",
+dict(kind="video", act="Intelligence", slug="claude-code", vid="AJpK3YTTKZ4", start=15, end=150,
      title="Claude Code: an agent that changes the code itself",
      label="Anthropic · official video · 2025 · excerpt"),
 dict(kind="data", act="Intelligence", figure="$500M",
@@ -39,7 +39,7 @@ dict(kind="bullets", act="Intelligence", title="From answers to actions", items=
 
 dict(kind="anchor", act="Intelligence", kicker="Trend 2 · Smart devices",
      text="The AI moves from the cloud into the object."),
-dict(kind="video", act="Intelligence", slug="humane-ai-pin", vid="9lNIwOOMVHk",
+dict(kind="video", act="Intelligence", slug="humane-ai-pin", vid="9lNIwOOMVHk", start=303, end=358,
      title="Humane Ai Pin: a phone with no screen",
      label="Humane · official video · 2023 · excerpt"),
 dict(kind="data", act="Intelligence", figure="$116M",
@@ -78,7 +78,7 @@ dict(kind="bullets", act="Intelligence", title="A laboratory on the counter", it
 
 dict(kind="anchor", act="Intelligence", kicker="Trend 5 · Quantum computing",
      text="A new kind of computer for a few very hard problems."),
-dict(kind="video", act="Intelligence", slug="google-willow", vid="W7ppd_RY-UE",
+dict(kind="video", act="Intelligence", slug="google-willow", vid="W7ppd_RY-UE", start=148, end=230,
      title="Google Willow", label="Google Quantum AI · official video · 2024 · excerpt"),
 dict(kind="data", act="Intelligence", figure="10<sup>25</sup> years",
      cap="what a supercomputer would need for a test Willow did in under five minutes",
@@ -177,7 +177,7 @@ dict(kind="bullets", act="Infrastructure", title="Two ways into space", items=[
 
 dict(kind="anchor", act="Infrastructure", kicker="Trend 11 · Energy and climate",
      text="Cheaper batteries change what we can electrify."),
-dict(kind="video", act="Infrastructure", slug="catl-shenxing", vid="Z75mVvU7MPQ",
+dict(kind="video", act="Infrastructure", slug="catl-shenxing", vid="Z75mVvU7MPQ", start=0, end=46,
      title="CATL: a full charge in six minutes",
      label="CATL · official video · April 2026 · excerpt · figures from CATL"),
 dict(kind="data", act="Infrastructure", figure="$108",
@@ -193,7 +193,7 @@ dict(kind="bullets", act="Infrastructure", title="28 April 2025: Spain and Portu
 # V. Money and life
 dict(kind="anchor", act="Money and life", kicker="Trend 12 · Fintech and stablecoins",
      text="Money that moves like a message."),
-dict(kind="video", act="Money and life", slug="stripe-stablecoins", vid="H4eWjC_nXcw",
+dict(kind="video", act="Money and life", slug="stripe-stablecoins", vid="H4eWjC_nXcw", start=0, end=76,
      title="Stripe: what is a stablecoin?", label="Stripe Developers · official video · September 2025 · excerpt"),
 dict(kind="chart", act="Money and life", title="Dollar stablecoins in circulation, $ billion",
      years=list(range(2020, 2027)), highlight="Stablecoins", round=50, grid=100,
