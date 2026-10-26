@@ -11,6 +11,9 @@ icai/
   tech-trends/       Tech Trends (Entrepreneurship & Innovation), taught every year
     build/           slides.py, build.py, prepare-media.py, photos/, maps/, poster/, logos/
     img/  video/     animated illustrations and clips for that class
+  customer-development/   Customer Development workshops (their own look, no media)
+    hypotheses/      From assumptions to hypotheses (a single hand-made HTML file)
+    build-to-learn/  Prototypes and experiments with AI: build/slides.py + build/build.py
 ```
 
 To start a new class, copy the most recent class folder, empty `build/slides.py` down to the
