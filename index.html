@@ -1,7 +1,42 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ICAI · Javier Fuentes Ibáñez</title>
-<style>body{margin:0;background:#F7F4EE;color:#1F1B16;font:18px/1.5 Georgia,serif;padding:64px 24px}
-main{max-width:640px;margin:0 auto}h1{font-size:32px;margin:0 0 8px}p{color:#6b645b;margin:0 0 32px}
-a{color:#1F1B16;font-size:22px;text-decoration:none;border-bottom:2px solid #B08A3E}li{margin:0 0 16px;list-style:none}ul{padding:0}</style>
-<main><h1>ICAI class decks</h1><p>Entrepreneurship &amp; Innovation · Javier Fuentes Ibáñez</p>
-<ul><li><a href="tech-trends/">Tech Trends</a></li></ul></main></html>
+<style>
+:root{--paper:#F7F4EE;--ink:#1B1B1B;--brass:#B8860B;--rust:#A4441F;--grey:#8A8378;--line:#DED6C7;
+  --sans:"Optima","Gill Sans","Gill Sans MT","Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5}
+main{max-width:860px;margin:0 auto;padding:72px 16px 56px}
+.kicker{font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);font-weight:600}
+h1{font-size:clamp(38px,6vw,60px);font-weight:600;line-height:1.05;letter-spacing:-.02em;margin:18px 0 0}
+h1::after{content:"";display:block;width:64px;height:3px;background:var(--brass);margin-top:22px;border-radius:2px}
+.lead{color:var(--grey);font-size:19px;max-width:36em;margin-top:24px}
+h2{font-size:15px;letter-spacing:.22em;text-transform:uppercase;color:var(--grey);font-weight:600;margin:56px 0 10px}
+ul{list-style:none;border-top:1px solid var(--line)}
+li{border-bottom:1px solid var(--line)}
+a.row{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 4px;color:inherit;text-decoration:none}
+.t{display:block;font-size:24px;font-weight:600;letter-spacing:-.01em;transition:color .15s}
+.d{display:block;color:var(--grey);font-size:16px;margin-top:2px}
+a.row:hover .t{color:var(--rust)}
+.tag{flex:none;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--brass);
+  border:1.5px solid var(--brass);padding:5px 12px;border-radius:999px}
+footer{margin-top:72px;color:var(--grey);font-size:15px}
+@media (max-width:520px){a.row{flex-direction:column;align-items:flex-start;gap:10px}}
+</style></head><body><main>
+<p class="kicker">ICAI · Comillas</p>
+<h1>Entrepreneurship &amp; Innovation</h1>
+<p class="lead">Class material, session by session. Open a deck and use the arrow keys or click to move forward. Press F for full screen.</p>
+
+<h2>Tech Trends</h2>
+<ul>
+<li><a class="row" href="tech-trends/"><span><span class="t">Tech Trends</span><span class="d">Technology trends for founders · 2026–27</span></span><span class="tag">Lecture</span></a></li>
+</ul>
+
+<h2>Customer Development</h2>
+<ul>
+<li><a class="row" href="customer-development/hypotheses/"><span><span class="t">From assumptions to hypotheses</span><span class="d">Customer discovery · Board 12 and Board 14</span></span><span class="tag">Workshop</span></a></li>
+</ul>
+
+<footer>Javier Fuentes Ibáñez</footer>
+</main></body></html>
