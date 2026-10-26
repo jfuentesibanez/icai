@@ -1,4 +1,5 @@
 from build import *
+from experiments import E, LEVELS
 
 META = dict(title="Build to Learn", file="index.html")
 
@@ -84,7 +85,7 @@ S.append(section("risk-moved", f"""
 
 # ---------- Step 2 · Four levels ----------
 
-LEVELS = [
+LADDER = [
     ("1", "Say", "They talk, you listen", "Interviews, observation", LINE),
     ("2", "Show", "They see it, but cannot use it", "Storyboard, video, mockup", LTEAL),
     ("3", "Fake", "They try to use it. You, or an AI, do the work behind", "Landing page, Wizard of Oz", F_COL),
@@ -98,60 +99,25 @@ steps = "".join(
     f'<h3 style="{RUBIK};font-size:56px;font-weight:800;line-height:1">{name}</h3>'
     f'<p style="font-size:26px;line-height:1.3">{what}</p>'
     f'<p style="font-size:22px;line-height:1.3;color:{GREY}">{ex}</p></div>'
-    for n, name, what, ex, col in LEVELS)
+    for n, name, what, ex, col in LADDER)
 S.append(section("ladder", f"""
 {head("Step 2 · The new fidelity ladder", "Four levels: say, show, fake, real")}
 {steps}
 <p style="position:absolute;left:128px;top:960px;width:1664px;border-top:3px solid {NAVY};padding-top:12px;font-size:24px;font-weight:700;color:{GREY};display:flex;justify-content:space-between"><span>Cheap and fast · weak evidence</span><span>More effort · strong evidence</span></p>
 """))
 
-S.append(section("say", f"""
-{head("Level 1 of 4 · Say", "They talk, you listen", size=64)}
-{grid([
-    technique("Problem interviews", "Ask about the last time they had the problem. Not about your idea.", "An AI note-taker for the transcript. You read it yourself.", "D"),
-    technique("Expert interviews", "People who sell to your customer, or work next to them.", "LinkedIn, the Comillas alumni network", "DFV"),
-    technique("Shadowing", "Watch them do the task today, where they do it.", "A notebook. Photos only with permission.", "DF"),
-    technique("Communities", "Read where they already complain: forums and reviews.", "Reddit, Forocoches, app store reviews. AI to summarise.", "D"),
-    technique("Trends and data", "Is the problem growing? Who measures it already?", "Google Trends, public statistics, AI deep research", "DV"),
-    technique("Synthetic users", "AI personas to rehearse your interview script. They are not customers.", "ChatGPT, Claude, Gemini", "!"),
-])}
-"""))
+def level_slide(lid):
+    n, name, title = LEVELS[lid]
+    cells = [technique(e["name"], e["short"], e["tools_short"], e["letters"], goto=e["id"])
+             for e in E if e["level"] == lid]
+    return section(lid, f"""
+{head(f"Level {n} of 4 · {name}", title, size=64)}
+{grid(cells)}
+""")
 
-S.append(section("show", f"""
-{head("Level 2 of 4 · Show", "They see it, but cannot use it yet", size=64)}
-{grid([
-    technique("Storyboard", "The customer’s day with your product, as a comic strip.", "AI images: ChatGPT, Gemini, Midjourney", "D"),
-    technique("Explainer video", "One minute that shows the value and ends with a button.", "AI video: Veo, Sora, Runway. Voice: ElevenLabs.", "D"),
-    technique("Product box", "The package or the sales sheet, before the product exists.", "AI renders, Canva", "DV"),
-    technique("Clickable mockup", "Screens that link together. Nothing works behind them.", "Figma, Figma Make", "D"),
-    technique("Paper and 3D print", "For physical products: they hold it, turn it, try to break it.", "Cardboard, a 3D printer", "DF"),
-    technique("5-second test", "Show a page for 5 seconds. What do they remember?", "Lyssna, Maze", "D"),
-])}
-"""))
 
-S.append(section("fake", f"""
-{head("Level 3 of 4 · Fake", "They try to use it. Behind the screen, you or an AI do the work.", size=64)}
-{grid([
-    technique("Landing page", "Your value proposition and one button: sign up or pre-order.", "Framer, Carrd, Lovable", "D"),
-    technique("Ad test", "Same audience, different promises. Which one gets the click?", "Meta, Google and TikTok ads. AI for the images.", "D"),
-    technique("Fake door", "A button for a feature that does not exist yet. Count clicks, then explain.", "Any web tool and its analytics", "D"),
-    technique("Wizard of Oz", "The customer thinks it is automatic. You, or an AI, do it behind.", "Chat or email, an AI model, you checking each answer", "DF"),
-    technique("Concierge", "You deliver the service by hand, and the customer knows it.", "WhatsApp, a spreadsheet, AI to go faster", "DF"),
-    technique("Frankenstein", "Join existing products, even a rival’s, before you build your own.", "Zapier, Make, n8n, Airtable", "F"),
-])}
-"""))
-
-S.append(section("real", f"""
-{head("Level 4 of 4 · Real", "They use it, come back and pay", size=64)}
-{grid([
-    technique("Working app", "Login, data, payments, AI features. You describe it, the tool builds it.", "Lovable, Bolt, v0, Replit, Claude Code, Cursor", "DFV"),
-    technique("Pre-sale", "A real price and a real payment before the product is ready. Refund if needed.", "Stripe payment links", "V"),
-    technique("Letter of intent", "B2B: a signed, non-binding promise to buy if you deliver.", "A one-page document", "V"),
-    technique("Pilot", "B2B: one customer, fixed time and budget, real use.", "A short contract with the success metric inside", "FV"),
-    technique("Crowdfunding", "The public pays first. You build after.", "Kickstarter, Indiegogo", "DV"),
-    technique("Usage data and A/B", "Who comes back after a week? Which version wins?", "PostHog, Google Analytics", "DV"),
-])}
-"""))
+for lid in LEVELS:
+    S.append(level_slide(lid))
 
 S.append(section("why-not-real", f"""
 {head("Step 2 · Choosing a level", "Real is cheap now. Why not always start there?")}
@@ -327,3 +293,24 @@ S.append(section("close", f"""
 <p style="{RUBIK};font-size:56px;font-weight:500;text-align:center">Build to learn.</p>
 <p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#BFD0DD;text-align:center">ICAI · Innovation &amp; Entrepreneurship · Customer Discovery</p>
 """, bg="navy", layout="center", extra=";align-items:center"))
+
+# ---------- Appendix · Experiment cards ----------
+
+def index_col(lid):
+    n, name, _ = LEVELS[lid]
+    items = "".join(
+        f'<p data-goto="{e["id"]}" style="font-size:28px;padding:12px 0;border-top:1px solid rgba(250,248,243,0.2)">{e["name"]}</p>'
+        for e in E if e["level"] == lid)
+    return (f'<div style="flex:1;display:flex;flex-direction:column;gap:4px">'
+            f'<p style="{RUBIK};font-size:24px;font-weight:800;color:{YELLOW}">Level {n}</p>'
+            f'<h3 style="{RUBIK};font-size:48px;font-weight:700;margin-bottom:12px">{name}</h3>{items}</div>')
+
+S.append(section("cards", f"""
+<div style="display:flex;flex-direction:column;gap:12px">{kicker("Appendix · Click a name to open its card", YELLOW)}
+<h2 style="{RUBIK};font-size:72px;font-weight:700;line-height:1.1">Experiment cards</h2></div>
+<div style="display:flex;gap:48px">{"".join(index_col(l) for l in LEVELS)}</div>
+""", bg="navy", layout="between"))
+
+for e in E:
+    n, name, _ = LEVELS[e["level"]]
+    S.append(experiment_card(e, n, name, e["level"], "cards"))
