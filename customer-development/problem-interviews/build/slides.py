@@ -204,13 +204,13 @@ VERDICT = {"Compliment": (RUST, WHITE), "Commitment": ("#1E7B4F", WHITE), "Depen
 quiz = "".join(
     f'<div style="display:flex;justify-content:space-between;align-items:center;gap:24px;padding:14px 0;border-top:2px solid {LINE}">'
     f'<p style="font-size:32px;line-height:1.25">{p}</p>'
-    f'<p data-build-in="fade 1" style="flex:none;font-size:22px;font-weight:700;letter-spacing:1px;text-transform:uppercase;'
+    f'<p data-build-in="fade {k + 1}" style="flex:none;font-size:22px;font-weight:700;letter-spacing:1px;text-transform:uppercase;'
     f'background:{VERDICT[v][0]};color:{VERDICT[v][1]};padding:8px 18px;border-radius:999px">{v}</p></div>'
-    for p, v in PHRASES)
+    for k, (p, v) in enumerate(PHRASES))
 S.append(section("compliment-commitment", f"""
 {head("Step 2 · Quiz", "Compliment or commitment?", size=64)}
 <div style="display:flex;flex-direction:column;border-bottom:2px solid {LINE}">{quiz}</div>
-<p data-build-in="fade 1" style="font-size:28px;line-height:1.4;color:{GREY}">A commitment costs them something: <b style="color:{NAVY}">time, reputation or money.</b> A trial counts only with a date and a price.</p>
+<p data-build-in="fade 9" style="font-size:28px;line-height:1.4;color:{GREY}">A commitment costs them something: <b style="color:{NAVY}">time, reputation or money.</b> A trial counts only with a date and a price.</p>
 {source(MOM)}
 """, layout="between"))
 
