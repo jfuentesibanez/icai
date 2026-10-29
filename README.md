@@ -14,6 +14,7 @@ icai/
   customer-development/   Customer Development workshops (their own look, no media)
     hypotheses/      From assumptions to hypotheses (a single hand-made HTML file)
     build-to-learn/  Prototypes and experiments with AI: build/slides.py + build/build.py
+    problem-interviews/  Problem interviews, boards 15 and 16: build/slides.py + build/build.py
 ```
 
 To start a new class, copy the most recent class folder, empty `build/slides.py` down to the
