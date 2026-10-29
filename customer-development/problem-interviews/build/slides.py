@@ -37,6 +37,70 @@ S.append(section("route", f"""
 
 # ---------- Step 1 · Why ----------
 
+SKIN, INK = "#F2C9A5", NAVY
+GLASSES = (f'<circle cx="89" cy="94" r="10" fill="none" stroke="{INK}" stroke-width="4"/>'
+           f'<circle cx="111" cy="94" r="10" fill="none" stroke="{INK}" stroke-width="4"/>'
+           f'<line x1="99" y1="94" x2="101" y2="94" stroke="{INK}" stroke-width="4"/>')
+SMILE = f'<path d="M90 107 Q100 115 110 107" fill="none" stroke="{INK}" stroke-width="3" stroke-linecap="round"/>'
+
+
+def person(fid, bg, shirt, hair, front="", face=SMILE):
+    """A simple bust in a circle; front is drawn over the body (the figure's tool)."""
+    return (f'<svg viewBox="0 0 200 200" width="132" height="132" aria-hidden="true">'
+            f'<defs><clipPath id="c-{fid}"><circle cx="100" cy="100" r="96"/></clipPath></defs>'
+            f'<circle cx="100" cy="100" r="96" fill="{bg}"/><g clip-path="url(#c-{fid})">'
+            f'<path d="M36 214 Q36 140 100 140 Q164 140 164 214Z" fill="{shirt}"/>'
+            f'<rect x="88" y="116" width="24" height="28" fill="{SKIN}"/>'
+            f'<circle cx="100" cy="92" r="32" fill="{SKIN}"/>{hair}'
+            f'<circle cx="89" cy="94" r="3.4" fill="{INK}"/><circle cx="111" cy="94" r="3.4" fill="{INK}"/>{face}{front}</g></svg>')
+
+
+def figure(name, bg):
+    short = lambda c: f'<path d="M68 92 Q66 58 100 58 Q134 58 132 92 Q126 72 100 72 Q78 74 68 92Z" fill="{c}"/>'
+    if name == "Data analyst":
+        return person("da", bg, "#D9643A",
+                      f'<circle cx="100" cy="50" r="14" fill="#3B2A20"/>{short("#3B2A20")}',
+                      f'<line x1="79" y1="106" x2="56" y2="138" stroke="{INK}" stroke-width="8" stroke-linecap="round"/>'
+                      f'<circle cx="89" cy="94" r="16" fill="#FFFFFF" fill-opacity=".35" stroke="{INK}" stroke-width="5"/>')
+    if name == "Journalist":
+        return person("jo", bg, TEAL, short("#4A3426"),
+                      f'<path d="M66 92 Q66 48 100 48 Q134 48 134 92" fill="none" stroke="#6B7685" stroke-width="6"/>'
+                      f'<rect x="60" y="82" width="12" height="24" rx="5" fill="#6B7685"/>'
+                      f'<rect x="128" y="82" width="12" height="24" rx="5" fill="#6B7685"/>'
+                      f'<path d="M134 102 Q132 118 112 118" fill="none" stroke="#6B7685" stroke-width="4"/>'
+                      f'<rect x="141" y="152" width="12" height="44" rx="4" fill="{INK}"/>'
+                      f'<circle cx="147" cy="148" r="12" fill="#2B3443"/>')
+    if name == "Anthropologist":
+        return person("an", bg, "#5DA9D6", short("#E2B36A"),
+                      f'{GLASSES}<line x1="86" y1="142" x2="82" y2="162" stroke="{INK}" stroke-width="3"/>'
+                      f'<line x1="114" y1="142" x2="118" y2="162" stroke="{INK}" stroke-width="3"/>'
+                      f'<rect x="78" y="160" width="44" height="30" rx="6" fill="{INK}"/>'
+                      f'<circle cx="100" cy="175" r="10" fill="#9FB7C6" stroke="#FFFFFF" stroke-width="2"/>')
+    if name == "Immersion":
+        return person("im", bg, "#9BC53D",
+                      '<path d="M66 100 Q62 56 100 56 Q138 56 134 100 L134 136 L122 136 L122 84 Q100 70 78 84 L80 136 L66 136Z" fill="#1F2A3A"/>',
+                      f'<line x1="160" y1="122" x2="150" y2="168" stroke="{INK}" stroke-width="4" stroke-linecap="round"/>'
+                      f'<ellipse cx="160" cy="96" rx="22" ry="28" fill="#F7E6D6" stroke="{INK}" stroke-width="3"/>'
+                      f'<circle cx="152" cy="92" r="7" fill="none" stroke="{TEAL}" stroke-width="3"/>'
+                      f'<circle cx="169" cy="92" r="7" fill="none" stroke="{TEAL}" stroke-width="3"/>'
+                      f'<path d="M153 108 Q160 113 167 108" fill="none" stroke="{INK}" stroke-width="2.5"/>')
+    if name == "Co-creation":
+        return person("co", bg, "#D84B3A",
+                      f'{short("#C0502A")}<path d="M69 80 Q100 62 131 80" fill="none" stroke="{YELLOW}" stroke-width="7"/>',
+                      '<rect x="58" y="160" width="32" height="32" rx="3" fill="#3BA7D9"/>'
+                      '<rect x="92" y="160" width="32" height="32" rx="3" fill="#F7DC5C"/>'
+                      '<rect x="75" y="128" width="32" height="32" rx="3" fill="#2E8C6A"/>')
+    if name == "Experiments":
+        return person("ex", bg, "#FFFFFF",
+                      '<path d="M68 96 Q66 78 74 74 L76 100Z M132 96 Q134 78 126 74 L124 100Z" fill="#8A8378"/>',
+                      f'<path d="M36 214 Q36 140 100 140 Q164 140 164 214Z" fill="none" stroke="{LINE}" stroke-width="3"/>'
+                      f'<rect x="92" y="144" width="16" height="60" fill="{INK}"/>{GLASSES}'
+                      f'<path d="M132 140 L132 156 L118 186 Q116 194 124 194 L156 194 Q164 194 162 186 L148 156 L148 140Z" fill="#FFFFFF" stroke="{INK}" stroke-width="3"/>'
+                      f'<path d="M124 174 L156 174 L160 186 Q161 190 157 190 L123 190 Q119 190 120 186Z" fill="{TEAL}"/>',
+                      f'<path d="M88 108 Q100 100 112 108 Q100 113 88 108Z" fill="#3B2A20"/>')
+    raise KeyError(name)
+
+
 METHODS = [
     ("Data analyst", "Reads reports and studies about the market"),
     ("Journalist", "Talks to customers"),
@@ -48,8 +112,9 @@ METHODS = [
 methods = "".join(
     f'<div style="flex:1;display:flex;flex-direction:column;gap:12px;padding:28px;border-radius:16px;'
     f'background:{YELLOW if n == "Journalist" else WHITE};{"" if n == "Journalist" else f"border:2px solid {LINE};"}">'
+    f'{figure(n, PAPER if n == "Journalist" else LTEAL)}'
     f'<p style="{RUBIK};font-size:24px;font-weight:800;color:{NAVY if n == "Journalist" else TEAL}">{k + 1}</p>'
-    f'<h3 style="{RUBIK};font-size:32px;font-weight:700;line-height:1.1">{n}</h3>'
+    f'<h3 style="{RUBIK};font-size:32px;font-weight:700;line-height:1.1">{n.replace("-", "&#8209;")}</h3>'
     f'<p style="font-size:24px;line-height:1.35;color:{NAVY if n == "Journalist" else GREY}">{t}</p></div>'
     for k, (n, t) in enumerate(METHODS))
 S.append(section("methods", f"""
