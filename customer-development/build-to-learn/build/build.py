@@ -92,7 +92,7 @@ def box(label, text, bg=WHITE, border=LINE, label_color=TEAL):
             f'<p style="font-size:25px;line-height:1.35">{text}</p></div>')
 
 
-def experiment_card(e, n, level_name, level_id, index_id):
+def experiment_card(e, n, level_name, index_id):
     steps = "".join(
         f'<div style="display:flex;gap:20px;align-items:baseline;padding:14px 0;border-top:2px solid {LINE}">'
         f'<p style="{RUBIK};width:36px;flex:none;font-size:34px;font-weight:800;color:{TEAL}">{k + 1}</p>'
@@ -103,7 +103,7 @@ def experiment_card(e, n, level_name, level_id, index_id):
 <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:32px">
 <div style="display:flex;flex-direction:column;gap:12px">{kicker(f"Experiment card · Level {n} · {level_name}")}
 <div style="display:flex;gap:24px;align-items:center"><h2 style="{RUBIK};font-size:72px;font-weight:700;line-height:1.1">{e["name"]}</h2>{tags(e["letters"])}</div></div>
-<div style="display:flex;gap:12px">{goto_pill(level_id, f"← Level {n}")}{goto_pill(index_id, "All cards")}</div>
+<div style="display:flex;gap:12px">{goto_pill(index_id, "← All experiments")}</div>
 </div>
 <div style="flex:1;display:flex;gap:48px;min-height:0">
 <div style="width:820px;flex:none;display:flex;flex-direction:column;gap:28px">

@@ -106,18 +106,24 @@ S.append(section("ladder", f"""
 <p style="position:absolute;left:128px;top:960px;width:1664px;border-top:3px solid {NAVY};padding-top:12px;font-size:24px;font-weight:700;color:{GREY};display:flex;justify-content:space-between"><span>Cheap and fast · weak evidence</span><span>More effort · strong evidence</span></p>
 """))
 
-def level_slide(lid):
-    n, name, title = LEVELS[lid]
-    cells = [technique(e["name"], e["short"], e["tools_short"], e["letters"], goto=e["id"])
-             for e in E if e["level"] == lid]
-    return section(lid, f"""
-{head(f"Level {n} of 4 · {name}", title, size=64)}
-{grid(cells)}
-""")
+def index_col(lid):
+    n, name, _ = LEVELS[lid]
+    items = "".join(
+        f'<p data-goto="{e["id"]}" style="font-size:28px;padding:12px 0;border-top:1px solid rgba(250,248,243,0.2)">{e["name"]}</p>'
+        for e in E if e["level"] == lid)
+    return (f'<div style="flex:1;display:flex;flex-direction:column;gap:4px">'
+            f'<p style="{RUBIK};font-size:24px;font-weight:800;color:{YELLOW}">Level {n}</p>'
+            f'<h3 style="{RUBIK};font-size:48px;font-weight:700;margin-bottom:12px">{name}</h3>{items}</div>')
 
+S.append(section("cards", f"""
+<div style="display:flex;flex-direction:column;gap:12px">{kicker("Step 2 · The menu · Click a name to open its card", YELLOW)}
+<h2 style="{RUBIK};font-size:72px;font-weight:700;line-height:1.1">24 experiments, one card each</h2></div>
+<div style="display:flex;gap:48px">{"".join(index_col(l) for l in LEVELS)}</div>
+""", bg="navy", layout="between"))
 
-for lid in LEVELS:
-    S.append(level_slide(lid))
+for e in E:
+    n, name, _ = LEVELS[e["level"]]
+    S.append(experiment_card(e, n, name, "cards"))
 
 S.append(section("why-not-real", f"""
 {head("Step 2 · Choosing a level", "Real is cheap now. Why not always start there?")}
@@ -293,24 +299,3 @@ S.append(section("close", f"""
 <p style="{RUBIK};font-size:56px;font-weight:500;text-align:center">Build to learn.</p>
 <p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#BFD0DD;text-align:center">ICAI · Innovation &amp; Entrepreneurship · Customer Discovery</p>
 """, bg="navy", layout="center", extra=";align-items:center"))
-
-# ---------- Appendix · Experiment cards ----------
-
-def index_col(lid):
-    n, name, _ = LEVELS[lid]
-    items = "".join(
-        f'<p data-goto="{e["id"]}" style="font-size:28px;padding:12px 0;border-top:1px solid rgba(250,248,243,0.2)">{e["name"]}</p>'
-        for e in E if e["level"] == lid)
-    return (f'<div style="flex:1;display:flex;flex-direction:column;gap:4px">'
-            f'<p style="{RUBIK};font-size:24px;font-weight:800;color:{YELLOW}">Level {n}</p>'
-            f'<h3 style="{RUBIK};font-size:48px;font-weight:700;margin-bottom:12px">{name}</h3>{items}</div>')
-
-S.append(section("cards", f"""
-<div style="display:flex;flex-direction:column;gap:12px">{kicker("Appendix · Click a name to open its card", YELLOW)}
-<h2 style="{RUBIK};font-size:72px;font-weight:700;line-height:1.1">Experiment cards</h2></div>
-<div style="display:flex;gap:48px">{"".join(index_col(l) for l in LEVELS)}</div>
-""", bg="navy", layout="between"))
-
-for e in E:
-    n, name, _ = LEVELS[e["level"]]
-    S.append(experiment_card(e, n, name, e["level"], "cards"))
