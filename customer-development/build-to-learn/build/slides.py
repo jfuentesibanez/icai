@@ -121,6 +121,57 @@ S.append(section("cards", f"""
 <div style="display:flex;gap:48px">{"".join(index_col(l) for l in LEVELS)}</div>
 """, bg="navy", layout="between"))
 
+# Effort vs evidence map, placed from the effort/evidence fields of each card
+EFFORTS = ["Low", "Medium", "High"]
+EVIDENCES = ["Strongest", "Strong", "Medium", "Weak", "None"]
+LEVEL_COL = {"say": LINE, "show": LTEAL, "fake": F_COL, "real": YELLOW}
+
+
+def effort_of(e):
+    return e["effort"].split(" ")[0]
+
+
+def evidence_of(e):
+    first = e["evidence"].split(":")[0].split(" ")[0]   # "Weak to medium" counts as Weak
+    return first
+
+
+def map_cell(eff, ev):
+    chips = "".join(
+        f'<p data-goto="{e["id"]}" style="font-size:22px;font-weight:700;background:{LEVEL_COL[e["level"]]};'
+        f'padding:6px 14px;border-radius:999px;white-space:nowrap">{e["name"]}</p>'
+        for e in E if effort_of(e) == eff and evidence_of(e) == ev)
+    hot = eff == "Low" and ev in ("Strongest", "Strong")
+    bg = CREAM if hot else WHITE
+    return (f'<div style="background:{bg};border-radius:10px;padding:10px 12px;display:flex;flex-wrap:wrap;'
+            f'gap:8px;align-content:center">{chips}</div>')
+
+
+ev_labels = "".join(
+    f'<p style="font-size:22px;font-weight:700;color:{GREY};display:flex;align-items:center;justify-content:flex-end">{ev}</p>'
+    for ev in EVIDENCES)
+cells = "".join(map_cell(eff, ev) for ev in EVIDENCES for eff in EFFORTS)
+legend = "".join(
+    f'<span style="display:flex;gap:8px;align-items:center"><span style="width:22px;height:22px;border-radius:6px;'
+    f'background:{LEVEL_COL[l]};border:1px solid {LINE}"></span>Level {LEVELS[l][0]} · {LEVELS[l][1]}</span>'
+    for l in LEVELS)
+ROWS = "0.9fr 1.1fr 1.1fr 1.7fr 0.7fr"
+S.append(section("map", f"""
+{head("Step 2 · The menu · Where each experiment sits", "Effort vs evidence", size=64)}
+<div style="flex:1;display:flex;gap:16px;min-height:0">
+<div style="display:flex;flex-direction:column;gap:8px;width:150px;flex:none">
+<p style="font-size:20px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:{TEAL};height:36px">Evidence ↑</p>
+<div style="flex:1;display:grid;grid-template-rows:{ROWS};gap:8px">{ev_labels}</div></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<div style="display:grid;grid-template-columns:1.5fr 1fr 0.7fr;gap:8px;height:36px">{"".join(f'<p style="font-size:22px;font-weight:700;color:{GREY};text-align:center">{x} effort</p>' for x in EFFORTS)}</div>
+<div style="flex:1;display:grid;grid-template-columns:1.5fr 1fr 0.7fr;grid-template-rows:{ROWS};gap:8px;background:{LINE};padding:8px;border-radius:14px">{cells}</div>
+</div></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:24px">
+<p style="font-size:26px;line-height:1.3"><b style="background:{CREAM};padding:2px 10px;border-radius:6px">Look top-left first:</b> strong evidence for little effort.</p>
+<div style="display:flex;gap:24px;font-size:20px;color:{GREY}">{legend}</div>
+</div>
+""", extra=";gap:24px"))
+
 for e in E:
     n, name, _ = LEVELS[e["level"]]
     S.append(experiment_card(e, n, name, "cards"))
