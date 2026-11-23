@@ -8,36 +8,14 @@ FIVE_HUNDRED = "the investor-presentation outline used by 500 Startups"
 S = []
 
 
-# ---------- Own figures ----------
+# ---------- Figures ----------
 
-def elevator(seconds=60, w=520):
-    """An elevator with open doors, two people and a countdown dial on top."""
-    frac = seconds / 60
-    import math
-    a = 2 * math.pi * frac - math.pi / 2
-    x, y = 260 + 62 * math.cos(a), 118 + 62 * math.sin(a)
-    big = 1 if frac > 0.5 else 0
-    return f'''<svg viewBox="0 0 520 640" width="{w}" aria-label="Two people in an elevator, a timer above the door">
-<rect x="40" y="200" width="440" height="430" rx="10" fill="{TEAL}"/>
-<rect x="80" y="240" width="360" height="390" fill="{LTEAL}"/>
-<rect x="80" y="240" width="36" height="390" fill="#CFE4EE"/><rect x="404" y="240" width="36" height="390" fill="#CFE4EE"/>
-<rect x="446" y="400" width="22" height="56" rx="6" fill="{PAPER}"/>
-<path d="M457 410 l7 10 h-14z M457 446 l7 -10 h-14z" fill="{NAVY}"/>
-<!-- founder -->
-<circle cx="190" cy="372" r="34" fill="#F2C9A5"/><path d="M156 368 Q156 330 190 330 Q224 330 224 368 Q214 348 190 350 Q168 350 156 368Z" fill="#3B2A20"/>
-<path d="M136 630 L136 470 Q136 418 190 418 Q244 418 244 470 L244 630Z" fill="{YELLOW}"/>
-<path d="M240 470 L300 500" stroke="{YELLOW}" stroke-width="22" stroke-linecap="round"/>
-<!-- investor -->
-<circle cx="340" cy="362" r="34" fill="#E0B48F"/><path d="M306 356 Q308 324 340 324 Q372 324 374 356Z" fill="#8A8378"/>
-<path d="M286 630 L286 462 Q286 410 340 410 Q394 410 394 462 L394 630Z" fill="{NAVY}"/>
-<path d="M332 410 L340 470 L348 410Z" fill="{RUST}"/>
-<rect x="390" y="540" width="56" height="44" rx="6" fill="{RUST}"/>
-<!-- timer -->
-<circle cx="260" cy="118" r="88" fill="{WHITE}" stroke="{NAVY}" stroke-width="8"/>
-<path d="M260 118 L260 56 A62 62 0 {big} 1 {x:.1f} {y:.1f}Z" fill="{YELLOW}"/>
-<circle cx="260" cy="118" r="62" fill="none" stroke="{LINE}" stroke-width="3"/>
-<text x="260" y="134" text-anchor="middle" font-family="Rubik, Arial" font-size="46" font-weight="800" fill="{NAVY}">{seconds}s</text>
-</svg>'''
+import base64
+ELEVATOR = "data:image/png;base64," + base64.b64encode((pathlib.Path(__file__).parent / "elevator.png").read_bytes()).decode()
+
+
+def elevator_icon(w=520):
+    return f'<img src="{ELEVATOR}" width="{w}" height="{w}" alt="An elevator with a timer on top">'
 
 
 def number(n, color=TEAL, size=56):
@@ -53,7 +31,7 @@ S.append(section("cover", f"""
 <p style="font-size:44px;color:{GREY}">Your startup in a few minutes, to a person who is very busy</p>
 </div>
 <p style="font-size:24px;color:{GREY}">Javier Fuentes</p>
-<div style="position:absolute;left:1260px;top:200px">{elevator(45, 500)}</div>
+<div style="position:absolute;left:1240px;top:240px">{elevator_icon(560)}</div>
 """, layout="between"))
 
 S.append(section("route", f"""
@@ -78,7 +56,7 @@ S.append(section("what", f"""
 <p data-build-in="rise 2" style="font-size:40px;line-height:1.35">The <b style="color:{TEAL}">elevator pitch</b> is the shortest form: you meet the investor in the elevator, and you have until the doors open.</p>
 <p data-build-in="rise 3" style="font-size:40px;line-height:1.35">The goal is not the money. <b style="color:{RUST}">The goal is a second meeting.</b></p>
 </div>
-{elevator(30, 440)}
+{elevator_icon(460)}
 </div>
 """, layout="center"))
 
