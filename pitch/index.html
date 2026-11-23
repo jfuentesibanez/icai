@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Elevator Pitch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400..800&family=Nunito+Sans:wght@400..800&family=Caveat:wght@400..700&display=swap">
+<style>
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;background:#0b1220;overflow:hidden}
+#stage{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0}
+#stage>section{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:hidden}
+#stage>section:not(.on){display:none!important}
+ul{padding-left:1.2em} li{margin:0}
+table{border-collapse:collapse;width:100%} th,td{padding:0.35em 0.6em;border-bottom:1px solid #d9dde3;text-align:left}
+th{font-weight:700}
+[data-build-in]{transition:opacity .45s ease, translate .45s ease}
+[data-build-in].hid{opacity:0;translate:0 24px}
+#bar{position:fixed;right:16px;bottom:12px;font:14px system-ui,sans-serif;color:#9aa6b8;user-select:none}
+[data-goto]{cursor:pointer}
+[data-goto]:hover{outline:3px solid #0F6E96;outline-offset:2px}
+#bar button{background:#1c2638;color:#dfe6f0;border:0;border-radius:6px;padding:6px 12px;margin-left:6px;cursor:pointer;font:inherit}
+</style></head><body>
+<div id="stage">
+<section id="cover" data-transition="fade" style="background:#FAF8F3;color:#15233B;font-family:'Nunito Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:space-between">
+
+<p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0F6E96">ICAI · Innovation &amp; Entrepreneurship · Workshop</p>
+<div style="display:flex;flex-direction:column;gap:32px;width:1100px">
+<h1 style="font-family:Rubik, Arial, sans-serif;font-size:136px;font-weight:700;line-height:1.02">The elevator pitch</h1>
+<p style="font-size:44px;color:#4A5568">Your startup in a few minutes, to a person who is very busy</p>
+</div>
+<p style="font-size:24px;color:#4A5568">Javier Fuentes</p>
+<div style="position:absolute;left:1260px;top:200px"><svg viewBox="0 0 520 640" width="500" aria-label="Two people in an elevator, a timer above the door">
+<rect x="40" y="200" width="440" height="430" rx="10" fill="#0F6E96"/>
+<rect x="80" y="240" width="360" height="390" fill="#EAF3F7"/>
+<rect x="80" y="240" width="36" height="390" fill="#CFE4EE"/><rect x="404" y="240" width="36" height="390" fill="#CFE4EE"/>
+<rect x="446" y="400" width="22" height="56" rx="6" fill="#FAF8F3"/>
+<path d="M457 410 l7 10 h-14z M457 446 l7 -10 h-14z" fill="#15233B"/>
+<!-- founder -->
+<circle cx="190" cy="372" r="34" fill="#F2C9A5"/><path d="M156 368 Q156 330 190 330 Q224 330 224 368 Q214 348 190 350 Q168 350 156 368Z" fill="#3B2A20"/>
+<path d="M136 630 L136 470 Q136 418 190 418 Q244 418 244 470 L244 630Z" fill="#F7DC5C"/>
+<path d="M240 470 L300 500" stroke="#F7DC5C" stroke-width="22" stroke-linecap="round"/>
+<!-- investor -->
+<circle cx="340" cy="362" r="34" fill="#E0B48F"/><path d="M306 356 Q308 324 340 324 Q372 324 374 356Z" fill="#8A8378"/>
+<path d="M286 630 L286 462 Q286 410 340 410 Q394 410 394 462 L394 630Z" fill="#15233B"/>
+<path d="M332 410 L340 470 L348 410Z" fill="#B5520B"/>
+<rect x="390" y="540" width="56" height="44" rx="6" fill="#B5520B"/>
+<!-- timer -->
+<circle cx="260" cy="118" r="88" fill="#FFFFFF" stroke="#15233B" stroke-width="8"/>
+<path d="M260 118 L260 56 A62 62 0 1 1 198.0 118.0Z" fill="#F7DC5C"/>
+<circle cx="260" cy="118" r="62" fill="none" stroke="#E4E7EB" stroke-width="3"/>
+<text x="260" y="134" text-anchor="middle" font-family="Rubik, Arial" font-size="46" font-weight="800" fill="#15233B">45s</text>
+</svg></div>
+
+</section>
+
+<section id="route" data-transition="fade" style="background:#FAF8F3;color:#15233B;font-family:'Nunito Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:40px">
+
+<div style="display:flex;flex-direction:column;gap:12px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0F6E96">Today’s route</p><h2 style="font-family:Rubik, Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">Five steps, from an empty slide to a pitch you can give</h2></div>
+<table style="font-family:'Nunito Sans', Arial, sans-serif;font-size:30px;color:#15233B">
+<tr><th style="width:8%">#</th><th style="width:50%">Step</th><th style="width:42%">Output</th></tr>
+<tr><td>1</td><td>What a pitch is, and who listens</td><td>Shared context</td></tr>
+<tr><td>2</td><td>The nine blocks of a pitch deck</td><td>What to put on each slide</td></tr>
+<tr><td>3</td><td>How big is the market: TAM, SAM, SOM</td><td>Your market in three numbers</td></tr>
+<tr style="background:#EAF3F7"><td>4</td><td>How to give it</td><td>Six rules for the day</td></tr>
+<tr style="background:#FBF0C2"><td>5</td><td>Your turn</td><td>Your pitch, ready to rehearse</td></tr>
+</table>
+
+</section>
+
+<section id="what" data-transition="fade" style="background:#FAF8F3;color:#15233B;font-family:'Nunito Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:32px">
+
+<div style="display:flex;flex-direction:column;gap:12px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0F6E96">Step 1 · What a pitch is</p><h2 style="font-family:Rubik, Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">A short presentation to convince an investor</h2></div>
+<div style="display:flex;gap:96px;align-items:center">
+<div style="flex:1;display:flex;flex-direction:column;gap:36px">
+<p data-build-in="rise 1" style="font-size:40px;line-height:1.35">The word comes from Silicon Valley: <b>the presentation a founder gives to investors.</b></p>
+<p data-build-in="rise 2" style="font-size:40px;line-height:1.35">The <b style="color:#0F6E96">elevator pitch</b> is the shortest form: you meet the investor in the elevator, and you have until the doors open.</p>
+<p data-build-in="rise 3" style="font-size:40px;line-height:1.35">The goal is not the money. <b style="color:#B5520B">The goal is a second meeting.</b></p>
+</div>
+<svg viewBox="0 0 520 640" width="440" aria-label="Two people in an elevator, a timer above the door">
+<rect x="40" y="200" width="440" height="430" rx="10" fill="#0F6E96"/>
+<rect x="80" y="240" width="360" height="390" fill="#EAF3F7"/>
+<rect x="80" y="240" width="36" height="390" fill="#CFE4EE"/><rect x="404" y="240" width="36" height="390" fill="#CFE4EE"/>
+<rect x="446" y="400" width="22" height="56" rx="6" fill="#FAF8F3"/>
+<path d="M457 410 l7 10 h-14z M457 446 l7 -10 h-14z" fill="#15233B"/>
+<!-- founder -->
+<circle cx="190" cy="372" r="34" fill="#F2C9A5"/><path d="M156 368 Q156 330 190 330 Q224 330 224 368 Q214 348 190 350 Q168 350 156 368Z" fill="#3B2A20"/>
+<path d="M136 630 L136 470 Q136 418 190 418 Q244 418 244 470 L244 630Z" fill="#F7DC5C"/>
+<path d="M240 470 L300 500" stroke="#F7DC5C" stroke-width="22" stroke-linecap="round"/>
+<!-- investor -->
+<circle cx="340" cy="362" r="34" fill="#E0B48F"/><path d="M306 356 Q308 324 340 324 Q372 324 374 356Z" fill="#8A8378"/>
+<path d="M286 630 L286 462 Q286 410 340 410 Q394 410 394 462 L394 630Z" fill="#15233B"/>
+<path d="M332 410 L340 470 L348 410Z" fill="#B5520B"/>
+<rect x="390" y="540" width="56" height="44" rx="6" fill="#B5520B"/>
+<!-- timer -->
+<circle cx="260" cy="118" r="88" fill="#FFFFFF" stroke="#15233B" stroke-width="8"/>
+<path d="M260 118 L260 56 A62 62 0 0 1 260.0 180.0Z" fill="#F7DC5C"/>
+<circle cx="260" cy="118" r="62" fill="none" stroke="#E4E7EB" stroke-width="3"/>
+<text x="260" y="134" text-anchor="middle" font-family="Rubik, Arial" font-size="46" font-weight="800" fill="#15233B">30s</text>
+</svg>
+</div>
+
+</section>
+
+<section id="audience" data-transition="fade" style="background:#FAF8F3;color:#15233B;font-family:'Nunito Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:space-between">
+
+<div style="display:flex;flex-direction:column;gap:12px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0F6E96">Step 1 · Who listens</p><h2 style="font-family:Rubik, Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">The people you pitch to are always busy</h2></div>
+<div style="display:flex;gap:24px;align-items:stretch"><div style="flex:1;display:flex;flex-direction:column;gap:12px;padding:32px;background:#F7DC5C;border-radius:16px"><p style="font-size:24px;font-weight:700;color:#4A5568"><span style="font-family:Rubik, Arial, sans-serif;font-size:56px;font-weight:800;color:#0F6E96">1</span></p><h3 style="font-family:Rubik, Arial, sans-serif;font-size:44px;font-weight:700;line-height:1.15;color:#15233B">Investors</h3><p style="font-size:26px;line-height:1.4;color:#15233B">See hundreds of pitches every year</p></div><div style="flex:1;display:flex;flex-direction:column;gap:12px;padding:32px;background:#FFFFFF;border:2px solid #E4E7EB;border-radius:16px"><p style="font-size:24px;font-weight:700;color:#4A5568"><span style="font-family:Rubik, Arial, sans-serif;font-size:56px;font-weight:800;color:#0F6E96">2</span></p><h3 style="font-family:Rubik, Arial, sans-serif;font-size:44px;font-weight:700;line-height:1.15;color:#15233B">CEOs</h3><p style="font-size:26px;line-height:1.4;color:#4A5568">Decide in minutes if a partner is worth it</p></div><div style="flex:1;display:flex;flex-direction:column;gap:12px;padding:32px;background:#FFFFFF;border:2px solid #E4E7EB;border-radius:16px"><p style="font-size:24px;font-weight:700;color:#4A5568"><span style="font-family:Rubik, Arial, sans-serif;font-size:56px;font-weight:800;color:#0F6E96">3</span></p><h3 style="font-family:Rubik, Arial, sans-serif;font-size:44px;font-weight:700;line-height:1.15;color:#15233B">Managers</h3><p style="font-size:26px;line-height:1.4;color:#4A5568">Have twenty other things on the agenda today</p></div><div style="flex:1;display:flex;flex-direction:column;gap:12px;padding:32px;background:#FFFFFF;border:2px solid #E4E7EB;border-radius:16px"><p style="font-size:24px;font-weight:700;color:#4A5568"><span style="font-family:Rubik, Arial, sans-serif;font-size:56px;font-weight:800;color:#0F6E96">4</span></p><h3 style="font-family:Rubik, Arial, sans-serif;font-size:44px;font-weight:700;line-height:1.15;color:#15233B">A jury</h3><p style="font-size:26px;line-height:1.4;color:#4A5568">Will hear ten teams in a row</p></div></div>
+<p style="font-size:32px;line-height:1.4;color:#4A5568;">So your job is simple: <b style='color:#15233B'>make it easy for them.</b> Easy to follow, easy to remember, easy to repeat to a partner.</p>
+
+</section>
+
+<section id="anchor-structure" data-transition="fade" style="background:#15233B;color:#FAF8F3;font-family:'Nunito Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:32px">
+
+<p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#F7DC5C">Step 1 · The one rule</p>
+<p style="font-family:Rubik, Arial, sans-serif;font-size:96px;font-weight:700;line-height:1.1;width:1600px">There is no fixed structure.<br><span style="color:#F7DC5C">Show your strengths first.</span></p>
+<p style="font-size:34px;color:#BFD0DD;width:1400px">The nine blocks that follow are a checklist, not a script. Strong traction? Open with it. Strong team? Say it early.</p>
+
+</section>
+
+<section id="nine" data-transition="fade" style="background:#FAF8F3;color:#15233B;font-family:'Nunito Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:40px">
+
+<div style="display:flex;flex-direction:column;gap:12px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0F6E96">Step 2 · The pitch deck</p><h2 style="font-family:Rubik, Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">Nine blocks, one question each</h2></div>
+<div style="flex:1;display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr;gap:20px"><div data-build-in="rise 1" data-goto="b-name" style="display:flex;gap:24px;align-items:center;padding:24px 28px;background:#FFFFFF;border:2px solid #E4E7EB;border-radius:14px"><span style="font-family:Rubik, Arial, sans-serif;font-size:52px;font-weight:800;color:#0F6E96">1</span><div style="display:flex;flex-direction:column;gap:4px"><h3 style="font-family:Rubik, Arial, sans-serif;font-size:34px;font-weight:700;line-height:1.1">Name, logo and slogan</h3><p style="font-size:24px;color:#4A5568">Who are you, in one line?</p></div></div><div data-build-in="rise 2" data-goto="b-problem" style="display:flex;gap:24px;align-items:center;padding:24px 28px;background:#FFFFFF;border:2px solid #E4E7EB;border-radius:14px"><span style="font-family:Rubik, Arial, sans-serif;font-size:52px;font-weight:800;color:#0F6E96">2</span><div style="display:flex;flex-direction:column;gap:4px"><h3 style="font-family:Rubik, Arial, sans-serif;font-size:34px;font-weight:700;line-height:1.1">The problem</h3><p style="font-size:24px;color:#4A5568">What hurts, and who does it hurt?</p></div></div><div data-build-in="rise 3" data-goto="b-solution" style="display:flex;gap:24px;align-items:center;padding:24px 28px;background:#FFFFFF;border:2px solid #E4E7EB;border-radius:14px"><span style="font-family:Rubik, Arial, sans-serif;font-size:52px;font-weight:800;color:#0F6E96">3</span><div style="display:flex;flex-direction:column;gap:4px"><h3 style="font-family:Rubik, Arial, sans-serif;font-size:34px;font-weight:700;line-height:1.1">The solution</h3><p style="font-size:24px;color:#4A5568">What do you do about it?</p></div></div><div data-build-in="rise 4" data-goto="b-how" style="display:flex;gap:24px;align-items:center;padding:24px 28px;background:#FFFFFF;border:2px solid #E4E7EB;border-radius:14px"><span style="font-family:Rubik, Arial, sans-serif;font-size:52px;font-weight:800;color:#0F6E96">4</span><div style="display:flex;flex-direction:column;gap:4px"><h3 style="font-family:Rubik, Arial, sans-serif;font-size:34px;font-weight:700;line-height:1.1">How it works</h3><p style="font-size:24px;color:#4A5568">What does the customer actually do?</p></div></div><div data-build-in="rise 5" data-goto="b-traction" style="display:flex;gap:24px;align-items:center;padding:24px 28px;background:#FFFFFF;border:2px solid #E4E7EB;border-radius:14px"><span style="font-family:Rubik, Arial, sans-serif;font-size:52px;font-weight:800;color:#0F6E96">5</span><div style="display:flex;flex-direction:column;gap:4px"><h3 style="font-family:Rubik, Arial, sans-serif;font-size:34px;font-weight:700;line-height:1.1">Traction / MVP</h3><p style="font-size:24px;color:#4A5568">What have you proven so far?</p></div></div><div data-build-in="rise 6" data-goto="b-model" style="display:flex;gap:24px;align-items:center;padding:24px 28px;background:#FFFFFF;border:2px solid #E4E7EB;border-radius:14px"><span style="font-family:Rubik, Arial, sans-serif;font-size:52px;font-weight:800;color:#0F6E96">6</span><div style="display:flex;flex-direction:column;gap:4px"><h3 style="font-family:Rubik, Arial, sans-serif;font-size:34px;font-weight:700;line-height:1.1">Business model</h3><p style="font-size:24px;color:#4A5568">Who pays, and for what?</p></div></div><div data-build-in="rise 7" data-goto="b-competition" style="display:flex;gap:24px;align-items:center;padding:24px 28px;background:#FFFFFF;border:2px solid #E4E7EB;border-radius:14px"><span style="font-family:Rubik, Arial, sans-serif;font-size:52px;font-weight:800;color:#0F6E96">7</span><div style="display:flex;flex-direction:column;gap:4px"><h3 style="font-family:Rubik, Arial, sans-serif;font-size:34px;font-weight:700;line-height:1.1">Competition</h3><p style="font-size:24px;color:#4A5568">Who else does this, and why you?</p></div></div><div data-build-in="rise 8" data-goto="b-market" style="display:flex;gap:24px;align-items:center;padding:24px 28px;background:#FFFFFF;border:2px solid #E4E7EB;border-radius:14px"><span style="font-family:Rubik, Arial, sans-serif;font-size:52px;font-weight:800;color:#0F6E96">8</span><div style="display:flex;flex-direction:column;gap:4px"><h3 style="font-family:Rubik, Arial, sans-serif;font-size:34px;font-weight:700;line-height:1.1">Size of the opportunity</h3><p style="font-size:24px;color:#4A5568">How big can this get?</p></div></div><div data-build-in="rise 9" data-goto="b-team" style="display:flex;gap:24px;align-items:center;padding:24px 28px;background:#FFFFFF;border:2px solid #E4E7EB;border-radius:14px"><span style="font-family:Rubik, Arial, sans-serif;font-size:52px;font-weight:800;color:#0F6E96">9</span><div style="display:flex;flex-direction:column;gap:4px"><h3 style="font-family:Rubik, Arial, sans-serif;font-size:34px;font-weight:700;line-height:1.1">Team and roles</h3><p style="font-size:24px;color:#4A5568">Why are you the right people?</p></div></div></div>
+<p style="font-size:22px;color:#4A5568">Based on the investor-presentation outline used by 500 Startups. Click a block to open it.</p>
+
+</section>
+
+<section id="b-name" data-transition="fade" style="background:#FAF8F3;color:#15233B;font-family:'Nunito Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:40px">
+
+<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0F6E96">Block 1 of 9 · Name, logo and slogan</p><h2 style="font-family:Rubik, Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">A name people remember, a line that says what you do</h2></div>
+<p data-goto="nine" style="font-size:22px;font-weight:700;background:#EAF3F7;color:#15233B;padding:10px 20px;border-radius:999px;white-space:nowrap">All blocks</p>
+</div>
+<div style="flex:1;display:flex;gap:56px;min-height:0">
+<div style="width:900px;flex:none;display:flex;flex-direction:column;justify-content:center;gap:36px">
+<p style="font-family:Caveat, 'Brush Script MT', cursive;font-size:68px;line-height:1.1;color:#15233B">The investor asks: “Who are you?”</p>
+<div style="border-bottom:2px solid #E4E7EB"><div data-build-in="rise 1" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">A name that is easy to say, spell and remember</p></div><div data-build-in="rise 2" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">A simple logo: it must work small, in one colour</p></div><div data-build-in="rise 3" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">A slogan: your mission in one sentence</p></div></div>
+
+</div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<div style="display:flex;flex-direction:column;gap:14px;padding:36px 40px;background:#FBF0C2;border:2px solid #FBF0C2;border-radius:16px"><p style="font-size:22px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8A5A00">Three names and where they come from</p><p style="font-size:31px;line-height:1.4"><b>Airbnb</b> comes from “AirBed &amp; Breakfast”: the first guests slept on air mattresses. <b>MySQL</b> is named after My, the daughter of a co-founder. <b>Cabify</b>: a cab, as an app.</p></div>
+<div style="display:flex;flex-direction:column;gap:14px;padding:36px 40px;background:#FFFFFF;border:2px solid #B5520B;border-radius:16px"><p style="font-size:22px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#B5520B">Watch out</p><p style="font-size:31px;line-height:1.4">A clever name you must explain. If you need a sentence to explain the name, the slogan has a problem too.</p></div>
+</div>
+</div>
+</section>
+
+<section id="b-problem" data-transition="fade" style="background:#FAF8F3;color:#15233B;font-family:'Nunito Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:40px">
+
+<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0F6E96">Block 2 of 9 · The problem</p><h2 style="font-family:Rubik, Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">Describe the pain so that everybody understands it</h2></div>
+<p data-goto="nine" style="font-size:22px;font-weight:700;background:#EAF3F7;color:#15233B;padding:10px 20px;border-radius:999px;white-space:nowrap">All blocks</p>
+</div>
+<div style="flex:1;display:flex;gap:56px;min-height:0">
+<div style="width:900px;flex:none;display:flex;flex-direction:column;justify-content:center;gap:36px">
+<p style="font-family:Caveat, 'Brush Script MT', cursive;font-size:68px;line-height:1.1;color:#15233B">The investor asks: “Is this a real problem?”</p>
+<div style="border-bottom:2px solid #E4E7EB"><div data-build-in="rise 1" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">Say it in words your grandmother understands</p></div><div data-build-in="rise 2" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">Show it is worth solving: how often, how bad, how many people</p></div><div data-build-in="rise 3" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">Use what you heard in your customer interviews</p></div></div>
+
+</div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<div style="display:flex;flex-direction:column;gap:14px;padding:36px 40px;background:#FBF0C2;border:2px solid #FBF0C2;border-radius:16px"><p style="font-size:22px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8A5A00">Example · Airbnb, 2008</p><p style="font-size:31px;line-height:1.4">Travellers care about price. Hotels keep you away from the real city. And there is no easy way to book a room in a local person’s home.</p></div>
+<div style="display:flex;flex-direction:column;gap:14px;padding:36px 40px;background:#FFFFFF;border:2px solid #B5520B;border-radius:16px"><p style="font-size:22px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#B5520B">Watch out</p><p style="font-size:31px;line-height:1.4">A problem only you have. Or a problem that is really your solution in disguise: “there is no app for X”.</p></div>
+</div>
+</div>
+</section>
+
+<section id="b-solution" data-transition="fade" style="background:#FAF8F3;color:#15233B;font-family:'Nunito Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:40px">
+
+<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0F6E96">Block 3 of 9 · The solution</p><h2 style="font-family:Rubik, Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">Say what you do, clearly and in few words</h2></div>
+<p data-goto="nine" style="font-size:22px;font-weight:700;background:#EAF3F7;color:#15233B;padding:10px 20px;border-radius:999px;white-space:nowrap">All blocks</p>
+</div>
+<div style="flex:1;display:flex;gap:56px;min-height:0">
+<div style="width:900px;flex:none;display:flex;flex-direction:column;justify-content:center;gap:36px">
+<p style="font-family:Caveat, 'Brush Script MT', cursive;font-size:68px;line-height:1.1;color:#15233B">The investor asks: “So what do you do?”</p>
+<div style="border-bottom:2px solid #E4E7EB"><div data-build-in="rise 1" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">One sentence that answers the problem slide</p></div><div data-build-in="rise 2" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">The benefit for the customer, not the technology</p></div><div data-build-in="rise 3" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">No technical detail here: that comes later, if they ask</p></div></div>
+
+</div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<div style="display:flex;flex-direction:column;gap:14px;padding:36px 40px;background:#FBF0C2;border:2px solid #FBF0C2;border-radius:16px"><p style="font-size:22px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8A5A00">Example · Airbnb, 2008</p><p style="font-size:31px;line-height:1.4">A website where people rent out a room to travellers. Travellers save money, hosts earn money, and both share the culture of the city.</p></div>
+<div style="display:flex;flex-direction:column;gap:14px;padding:36px 40px;background:#FFFFFF;border:2px solid #B5520B;border-radius:16px"><p style="font-size:22px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#B5520B">Watch out</p><p style="font-size:31px;line-height:1.4">A list of features. The investor wants to know what changes for the customer.</p></div>
+</div>
+</div>
+</section>
+
+<section id="b-how" data-transition="fade" style="background:#FAF8F3;color:#15233B;font-family:'Nunito Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:40px">
+
+<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0F6E96">Block 4 of 9 · How it works</p><h2 style="font-family:Rubik, Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">Show how it works, step by step</h2></div>
+<p data-goto="nine" style="font-size:22px;font-weight:700;background:#EAF3F7;color:#15233B;padding:10px 20px;border-radius:999px;white-space:nowrap">All blocks</p>
+</div>
+<div style="flex:1;display:flex;gap:56px;min-height:0">
+<div style="width:900px;flex:none;display:flex;flex-direction:column;justify-content:center;gap:36px">
+<p style="font-family:Caveat, 'Brush Script MT', cursive;font-size:68px;line-height:1.1;color:#15233B">The investor asks: “What does the customer actually do?”</p>
+<div style="border-bottom:2px solid #E4E7EB"><div data-build-in="rise 1" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">The customer’s path in three or four steps</p></div><div data-build-in="rise 2" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">A screenshot, a prototype or a short demo is worth ten bullets</p></div><div data-build-in="rise 3" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">Now you can add a little more detail</p></div></div>
+
+</div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<div style="display:flex;flex-direction:column;gap:14px;padding:36px 40px;background:#FBF0C2;border:2px solid #FBF0C2;border-radius:16px"><p style="font-size:22px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8A5A00">Example · Airbnb, 2008</p><p style="font-size:31px;line-height:1.4">Three steps: search by city, see the room and the host, book and pay online.</p></div>
+<div style="display:flex;flex-direction:column;gap:14px;padding:36px 40px;background:#FFFFFF;border:2px solid #B5520B;border-radius:16px"><p style="font-size:22px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#B5520B">Watch out</p><p style="font-size:31px;line-height:1.4">A live demo with no plan B. Record a video of the demo in case the Wi-Fi fails.</p></div>
+</div>
+</div>
+</section>
+
+<section id="b-traction" data-transition="fade" style="background:#FAF8F3;color:#15233B;font-family:'Nunito Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:40px">
+
+<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0F6E96">Block 5 of 9 · Traction / MVP</p><h2 style="font-family:Rubik, Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">Show what you have proven so far</h2></div>
+<p data-goto="nine" style="font-size:22px;font-weight:700;background:#EAF3F7;color:#15233B;padding:10px 20px;border-radius:999px;white-space:nowrap">All blocks</p>
+</div>
+<div style="flex:1;display:flex;gap:56px;min-height:0">
+<div style="width:900px;flex:none;display:flex;flex-direction:column;justify-content:center;gap:36px">
+<p style="font-family:Caveat, 'Brush Script MT', cursive;font-size:68px;line-height:1.1;color:#15233B">The investor asks: “Does anybody want it?”</p>
+<div style="border-bottom:2px solid #E4E7EB"><div data-build-in="rise 1" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">Customers or users, and how fast they grow</p></div><div data-build-in="rise 2" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">Revenue, even if small</p></div><div data-build-in="rise 3" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">Lessons from your interviews and experiments</p></div><div data-build-in="rise 4" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">Other milestones: a pilot, a partner, a letter of intent</p></div></div>
+<p style="font-size:26px;line-height:1.4;color:#4A5568;">No customers yet? Then your traction is <b style='color:#15233B'>what you learned:</b> interviews, experiments, results.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<div style="display:flex;flex-direction:column;gap:14px;padding:36px 40px;background:#FBF0C2;border:2px solid #FBF0C2;border-radius:16px"><p style="font-size:22px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8A5A00">Example · Airbnb, 2008</p><p style="font-size:31px;line-height:1.4">Before they had customers, they showed demand: thousands of people already looking for a room on Couchsurfing and Craigslist.</p></div>
+<div style="display:flex;flex-direction:column;gap:14px;padding:36px 40px;background:#FFFFFF;border:2px solid #B5520B;border-radius:16px"><p style="font-size:22px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#B5520B">Watch out</p><p style="font-size:31px;line-height:1.4">Vanity numbers: page visits, likes, “people said they love it”. Show what people <b>did</b>, not what they said.</p></div>
+</div>
+</div>
+</section>
+
+<section id="b-model" data-transition="fade" style="background:#FAF8F3;color:#15233B;font-family:'Nunito Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:40px">
+
+<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0F6E96">Block 6 of 9 · Business model</p><h2 style="font-family:Rubik, Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">Explain how you make money</h2></div>
+<p data-goto="nine" style="font-size:22px;font-weight:700;background:#EAF3F7;color:#15233B;padding:10px 20px;border-radius:999px;white-space:nowrap">All blocks</p>
+</div>
+<div style="flex:1;display:flex;gap:56px;min-height:0">
+<div style="width:900px;flex:none;display:flex;flex-direction:column;justify-content:center;gap:36px">
+<p style="font-family:Caveat, 'Brush Script MT', cursive;font-size:68px;line-height:1.1;color:#15233B">The investor asks: “Who pays, and for what?”</p>
+<div style="border-bottom:2px solid #E4E7EB"><div data-build-in="rise 1" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">Who pays, how much, and how often</p></div><div data-build-in="rise 2" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">Use your Business Model Canvas as a guide, without showing all of it</p></div><div data-build-in="rise 3" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">One simple calculation is better than a big table</p></div></div>
+
+</div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<div style="display:flex;flex-direction:column;gap:14px;padding:36px 40px;background:#FBF0C2;border:2px solid #FBF0C2;border-radius:16px"><p style="font-size:22px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8A5A00">Example · Airbnb, 2008</p><p style="font-size:31px;line-height:1.4">Airbnb takes a commission on each booking. The calculation on the slide: number of trips × average price × commission.</p></div>
+<div style="display:flex;flex-direction:column;gap:14px;padding:36px 40px;background:#FFFFFF;border:2px solid #B5520B;border-radius:16px"><p style="font-size:22px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#B5520B">Watch out</p><p style="font-size:31px;line-height:1.4">Showing the full canvas with nine boxes full of text. Pick the two or three boxes that matter.</p></div>
+</div>
+</div>
+</section>
+
+<section id="b-competition" data-transition="fade" style="background:#FAF8F3;color:#15233B;font-family:'Nunito Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:40px">
+
+<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0F6E96">Block 7 of 9 · Competition</p><h2 style="font-family:Rubik, Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">Say who your competitors are, and how you are different</h2></div>
+<p data-goto="nine" style="font-size:22px;font-weight:700;background:#EAF3F7;color:#15233B;padding:10px 20px;border-radius:999px;white-space:nowrap">All blocks</p>
+</div>
+<div style="flex:1;display:flex;gap:56px;min-height:0">
+<div style="width:900px;flex:none;display:flex;flex-direction:column;justify-content:center;gap:36px">
+<p style="font-family:Caveat, 'Brush Script MT', cursive;font-size:68px;line-height:1.1;color:#15233B">The investor asks: “Why you, and not them?”</p>
+<div style="border-bottom:2px solid #E4E7EB"><div data-build-in="rise 1" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">Name them: there is always competition, even if it is “doing nothing”</p></div><div data-build-in="rise 2" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">Choose two criteria that matter to the customer</p></div><div data-build-in="rise 3" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">Put everybody on a 2 × 2 map: you alone in one corner</p></div></div>
+
+</div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<div style="display:flex;flex-direction:column;gap:14px;padding:36px 40px;background:#FBF0C2;border:2px solid #FBF0C2;border-radius:16px"><p style="font-size:22px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8A5A00">Example · Airbnb, 2008</p><p style="font-size:31px;line-height:1.4">Their map: cheap or expensive, and booking online or offline. Hotels, Couchsurfing, Craigslist and others on the map; Airbnb alone in the corner “cheap and online”.</p></div>
+<div style="display:flex;flex-direction:column;gap:14px;padding:36px 40px;background:#FFFFFF;border:2px solid #B5520B;border-radius:16px"><p style="font-size:22px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#B5520B">Watch out</p><p style="font-size:31px;line-height:1.4">“We have no competitors.” To an investor it means: there is no market, or you have not looked.</p></div>
+</div>
+</div>
+</section>
+
+<section id="b-market" data-transition="fade" style="background:#FAF8F3;color:#15233B;font-family:'Nunito Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:40px">
+
+<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0F6E96">Block 8 of 9 · Size of the opportunity</p><h2 style="font-family:Rubik, Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">Show how big the market is</h2></div>
+<p data-goto="nine" style="font-size:22px;font-weight:700;background:#EAF3F7;color:#15233B;padding:10px 20px;border-radius:999px;white-space:nowrap">All blocks</p>
+</div>
+<div style="flex:1;display:flex;gap:56px;min-height:0">
+<div style="width:900px;flex:none;display:flex;flex-direction:column;justify-content:center;gap:36px">
+<p style="font-family:Caveat, 'Brush Script MT', cursive;font-size:68px;line-height:1.1;color:#15233B">The investor asks: “How big can this get?”</p>
+<div style="border-bottom:2px solid #E4E7EB"><div data-build-in="rise 1" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">Total market: everybody with the problem</p></div><div data-build-in="rise 2" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">The part you can serve with your product</p></div><div data-build-in="rise 3" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">The part you can realistically win in a few years</p></div></div>
+<div style="display:flex"><p data-goto="tam" style="font-size:22px;font-weight:700;background:#EAF3F7;color:#15233B;padding:10px 20px;border-radius:999px;white-space:nowrap">TAM, SAM, SOM →</p></div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<div style="display:flex;flex-direction:column;gap:14px;padding:36px 40px;background:#FBF0C2;border:2px solid #FBF0C2;border-radius:16px"><p style="font-size:22px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8A5A00">Example · Airbnb, 2008</p><p style="font-size:31px;line-height:1.4">Two billion trips per year in the world. 560 million of them budget and booked online. Their target: 15% of that, 84 million trips.</p></div>
+<div style="display:flex;flex-direction:column;gap:14px;padding:36px 40px;background:#FFFFFF;border:2px solid #B5520B;border-radius:16px"><p style="font-size:22px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#B5520B">Watch out</p><p style="font-size:31px;line-height:1.4">Starting with “the market is 500 billion euros, if we get 1%…”. Build it from the bottom: customers × price.</p></div>
+</div>
+</div>
+</section>
+
+<section id="b-team" data-transition="fade" style="background:#FAF8F3;color:#15233B;font-family:'Nunito Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:40px">
+
+<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0F6E96">Block 9 of 9 · Team and roles</p><h2 style="font-family:Rubik, Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">Show why you are the right people</h2></div>
+<p data-goto="nine" style="font-size:22px;font-weight:700;background:#EAF3F7;color:#15233B;padding:10px 20px;border-radius:999px;white-space:nowrap">All blocks</p>
+</div>
+<div style="flex:1;display:flex;gap:56px;min-height:0">
+<div style="width:900px;flex:none;display:flex;flex-direction:column;justify-content:center;gap:36px">
+<p style="font-family:Caveat, 'Brush Script MT', cursive;font-size:68px;line-height:1.1;color:#15233B">The investor asks: “Why should I trust you with this?”</p>
+<div style="border-bottom:2px solid #E4E7EB"><div data-build-in="rise 1" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">Who you are, with a photo</p></div><div data-build-in="rise 2" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">What background makes you right for this problem</p></div><div data-build-in="rise 3" style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-top:2px solid #E4E7EB"><p style="font-family:Rubik, Arial, sans-serif;width:36px;flex:none;font-size:32px;font-weight:800;color:#0F6E96">✓</p><p style="flex:1;font-size:36px;line-height:1.3">Who takes care of what in the team</p></div></div>
+
+</div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<div style="display:flex;flex-direction:column;gap:14px;padding:36px 40px;background:#FBF0C2;border:2px solid #FBF0C2;border-radius:16px"><p style="font-size:22px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8A5A00">Example · Airbnb, 2008</p><p style="font-size:31px;line-height:1.4">On the slide: the founders, with their roles and one line each about what they had built before.</p></div>
+<div style="display:flex;flex-direction:column;gap:14px;padding:36px 40px;background:#FFFFFF;border:2px solid #B5520B;border-radius:16px"><p style="font-size:22px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#B5520B">Watch out</p><p style="font-size:31px;line-height:1.4">Titles with no content (“CEO, CTO, CMO” in a team of three students). Say what each person actually does.</p></div>
+</div>
+</div>
+</section>
+
+<section id="tam" data-transition="fade" style="background:#FAF8F3;color:#15233B;font-family:'Nunito Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:40px">
+
+<div style="display:flex;flex-direction:column;gap:12px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0F6E96">Step 3 · Size of the opportunity</p><h2 style="font-family:Rubik, Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">Three circles, from everybody to your customers</h2></div>
+<div style="flex:1;display:flex;gap:64px;align-items:center">
+<svg viewBox="0 0 720 720" width="640" aria-label="Three nested circles: TAM, SAM, SOM">
+<circle cx="360" cy="360" r="340" fill="#EAF3F7"/>
+<circle cx="360" cy="460" r="230" fill="#CFE4EE"/>
+<circle cx="360" cy="560" r="120" fill="#F7DC5C"/>
+<text x="360" y="110" text-anchor="middle" font-family="Rubik, Arial" font-size="64" font-weight="800" fill="#0F6E96">TAM</text>
+<text x="360" y="320" text-anchor="middle" font-family="Rubik, Arial" font-size="56" font-weight="800" fill="#0F6E96">SAM</text>
+<text x="360" y="580" text-anchor="middle" font-family="Rubik, Arial" font-size="52" font-weight="800" fill="#15233B">SOM</text>
+</svg>
+<div style="flex:1;display:flex;flex-direction:column;gap:18px"><div data-build-in="rise 1" style="display:flex;gap:28px;align-items:flex-start;padding:24px 28px;background:#EAF3F7;border-radius:14px"><p style="font-family:Rubik, Arial, sans-serif;width:130px;flex:none;font-size:48px;font-weight:800;color:#15233B">TAM</p><div style="display:flex;flex-direction:column;gap:6px"><p style="font-size:24px;font-weight:700;color:#0F6E96">Total Available Market</p><p style="font-size:28px;line-height:1.3">Everybody who has the problem, in the whole world.</p><p style="font-size:22px;color:#4A5568"><b>Example:</b> All LED lighting</p></div></div><div data-build-in="rise 2" style="display:flex;gap:28px;align-items:flex-start;padding:24px 28px;background:#CFE4EE;border-radius:14px"><p style="font-family:Rubik, Arial, sans-serif;width:130px;flex:none;font-size:48px;font-weight:800;color:#15233B">SAM</p><div style="display:flex;flex-direction:column;gap:6px"><p style="font-size:24px;font-weight:700;color:#0F6E96">Serviceable Available Market</p><p style="font-size:28px;line-height:1.3">The part you can reach with your product and your channels.</p><p style="font-size:22px;color:#4A5568"><b>Example:</b> Colour-changing LED for the home</p></div></div><div data-build-in="rise 3" style="display:flex;gap:28px;align-items:flex-start;padding:24px 28px;background:#F7DC5C;border-radius:14px"><p style="font-family:Rubik, Arial, sans-serif;width:130px;flex:none;font-size:48px;font-weight:800;color:#15233B">SOM</p><div style="display:flex;flex-direction:column;gap:6px"><p style="font-size:24px;font-weight:700;color:#0F6E96">Serviceable Obtainable Market</p><p style="font-size:28px;line-height:1.3">The part you can realistically win, with your competition, countries and sales team.</p><p style="font-size:22px;color:#4A5568"><b>Example:</b> Your sales goal for year 3</p></div></div></div>
+</div>
+
+</section>
+
+<section id="tam-airbnb" data-transition="fade" style="background:#FAF8F3;color:#15233B;font-family:'Nunito Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:space-between">
+
+<div style="display:flex;flex-direction:column;gap:12px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0F6E96">Step 3 · Size of the opportunity</p><h2 style="font-family:Rubik, Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">How Airbnb sized its market in 2008</h2></div>
+<div style="display:flex;gap:40px;align-items:flex-end;justify-content:center">
+<div data-build-in="rise 1" style="display:flex;flex-direction:column;align-items:center;gap:20px;width:460px"><div style="width:460px;height:460px;border-radius:50%;background:#0F6E96;display:flex;align-items:center;justify-content:center"><p style="font-family:Rubik, Arial, sans-serif;font-size:88px;font-weight:800;color:#FAF8F3">2 billion+</p></div><p style="font-family:Rubik, Arial, sans-serif;font-size:32px;font-weight:700;text-align:center">Trips booked, worldwide</p><p style="font-size:24px;color:#4A5568;text-align:center">TAM</p></div>
+<div data-build-in="rise 2" style="display:flex;flex-direction:column;align-items:center;gap:20px;width:380px"><div style="width:260px;height:260px;border-radius:50%;background:#0F6E96;display:flex;align-items:center;justify-content:center"><p style="font-family:Rubik, Arial, sans-serif;font-size:49px;font-weight:800;color:#FAF8F3">560 M</p></div><p style="font-family:Rubik, Arial, sans-serif;font-size:32px;font-weight:700;text-align:center">Budget and online</p><p style="font-size:24px;color:#4A5568;text-align:center">SAM</p></div>
+<div data-build-in="rise 3" style="display:flex;flex-direction:column;align-items:center;gap:20px;width:380px"><div style="width:160px;height:160px;border-radius:50%;background:#B5520B;display:flex;align-items:center;justify-content:center"><p style="font-family:Rubik, Arial, sans-serif;font-size:40px;font-weight:800;color:#FAF8F3">84 M</p></div><p style="font-family:Rubik, Arial, sans-serif;font-size:32px;font-weight:700;text-align:center">Trips with Airbnb</p><p style="font-size:24px;color:#4A5568;text-align:center">SOM · 15% of the SAM</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:56px;font-size:20px;color:#4A5568">Source: Airbnb seed deck, 2008 (market size slide; its own sources: Travel Industry Association of America, World Tourism Organization, comScore)</p>
+
+</section>
+
+<section id="tips" data-transition="fade" style="background:#FAF8F3;color:#15233B;font-family:'Nunito Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:40px">
+
+<div style="display:flex;flex-direction:column;gap:12px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0F6E96">Step 4 · How to give it</p><h2 style="font-family:Rubik, Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">Six rules for the day of the pitch</h2></div>
+<div style="flex:1;display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr;gap:24px"><div data-build-in="rise 1" style="display:flex;flex-direction:column;gap:12px;padding:32px;background:#FFFFFF;border:2px solid #E4E7EB;border-radius:16px"><span style="font-family:Rubik, Arial, sans-serif;font-size:44px;font-weight:800;color:#0F6E96">1</span><h3 style="font-family:Rubik, Arial, sans-serif;font-size:38px;font-weight:700;line-height:1.1">Start with a question</h3><p style="font-size:26px;line-height:1.35;color:#4A5568">The first ten seconds decide if they listen. “How did you book your last trip?”</p></div><div data-build-in="rise 2" style="display:flex;flex-direction:column;gap:12px;padding:32px;background:#FFFFFF;border:2px solid #E4E7EB;border-radius:16px"><span style="font-family:Rubik, Arial, sans-serif;font-size:44px;font-weight:800;color:#0F6E96">2</span><h3 style="font-family:Rubik, Arial, sans-serif;font-size:38px;font-weight:700;line-height:1.1">Clear, brief, concise</h3><p style="font-size:26px;line-height:1.35;color:#4A5568">One idea per slide. If a slide needs a paragraph, it is two slides.</p></div><div data-build-in="rise 3" style="display:flex;flex-direction:column;gap:12px;padding:32px;background:#FFFFFF;border:2px solid #E4E7EB;border-radius:16px"><span style="font-family:Rubik, Arial, sans-serif;font-size:44px;font-weight:800;color:#0F6E96">3</span><h3 style="font-family:Rubik, Arial, sans-serif;font-size:38px;font-weight:700;line-height:1.1">Plan the turns</h3><p style="font-size:26px;line-height:1.35;color:#4A5568">If you speak in turns, decide who says what, and how you pass the word.</p></div><div data-build-in="rise 4" style="display:flex;flex-direction:column;gap:12px;padding:32px;background:#FFFFFF;border:2px solid #E4E7EB;border-radius:16px"><span style="font-family:Rubik, Arial, sans-serif;font-size:44px;font-weight:800;color:#0F6E96">4</span><h3 style="font-family:Rubik, Arial, sans-serif;font-size:38px;font-weight:700;line-height:1.1">Do not memorise</h3><p style="font-size:26px;line-height:1.35;color:#4A5568">Learn the order and the key sentences. A memorised text sounds like a recording.</p></div><div data-build-in="rise 5" style="display:flex;flex-direction:column;gap:12px;padding:32px;background:#F7DC5C;border-radius:16px"><span style="font-family:Rubik, Arial, sans-serif;font-size:44px;font-weight:800;color:#15233B">5</span><h3 style="font-family:Rubik, Arial, sans-serif;font-size:38px;font-weight:700;line-height:1.1">Practise the time</h3><p style="font-size:26px;line-height:1.35;color:#15233B">Rehearse with a timer, out loud, at least three times. You will be slower than you think.</p></div><div data-build-in="rise 6" style="display:flex;flex-direction:column;gap:12px;padding:32px;background:#FFFFFF;border:2px solid #E4E7EB;border-radius:16px"><span style="font-family:Rubik, Arial, sans-serif;font-size:44px;font-weight:800;color:#0F6E96">6</span><h3 style="font-family:Rubik, Arial, sans-serif;font-size:38px;font-weight:700;line-height:1.1">Be convincing</h3><p style="font-size:26px;line-height:1.35;color:#4A5568">Believe in it, look at the audience, and finish with what you need from them.</p></div></div>
+
+</section>
+
+<section id="anchor-second" data-transition="fade" style="background:#15233B;color:#FAF8F3;font-family:'Nunito Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:32px">
+
+<p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#F7DC5C">Step 4 · Remember</p>
+<p style="font-family:Rubik, Arial, sans-serif;font-size:104px;font-weight:700;line-height:1.1;width:1600px">You do not need to tell everything.<br><span style="color:#F7DC5C">You need a second meeting.</span></p>
+
+</section>
+
+<section id="your-turn" data-transition="fade" style="background:#FBF0C2;color:#15233B;font-family:'Nunito Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:space-between">
+
+<div style="display:flex;flex-direction:column;gap:12px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8A5A00">Your turn · This week</p><h2 style="font-family:Rubik, Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">Prepare your team’s pitch</h2></div>
+<div style="display:flex;gap:24px;align-items:stretch"><div style="flex:1;display:flex;flex-direction:column;gap:12px;padding:32px;background:#FAF8F3;border-radius:16px"><p style="font-size:24px;font-weight:700;color:#4A5568"><span style="font-family:Rubik, Arial, sans-serif;font-size:56px;font-weight:800;color:#0F6E96">1</span></p><h3 style="font-family:Rubik, Arial, sans-serif;font-size:36px;font-weight:700;line-height:1.15;color:#15233B">Choose your blocks</h3><p style="font-size:26px;line-height:1.4;color:#4A5568">Go through the nine blocks. Put your strongest one early. Drop what you do not have yet.</p></div><div style="flex:1;display:flex;flex-direction:column;gap:12px;padding:32px;background:#FAF8F3;border-radius:16px"><p style="font-size:24px;font-weight:700;color:#4A5568"><span style="font-family:Rubik, Arial, sans-serif;font-size:56px;font-weight:800;color:#0F6E96">2</span></p><h3 style="font-family:Rubik, Arial, sans-serif;font-size:36px;font-weight:700;line-height:1.15;color:#15233B">One slide per block</h3><p style="font-size:26px;line-height:1.4;color:#4A5568">One idea per slide, big text, one picture or one number.</p></div><div style="flex:1;display:flex;flex-direction:column;gap:12px;padding:32px;background:#FAF8F3;border-radius:16px"><p style="font-size:24px;font-weight:700;color:#4A5568"><span style="font-family:Rubik, Arial, sans-serif;font-size:56px;font-weight:800;color:#0F6E96">3</span></p><h3 style="font-family:Rubik, Arial, sans-serif;font-size:36px;font-weight:700;line-height:1.15;color:#15233B">Split the voices</h3><p style="font-size:26px;line-height:1.4;color:#4A5568">Everybody in the team speaks. Decide who says what.</p></div><div style="flex:1;display:flex;flex-direction:column;gap:12px;padding:32px;background:#15233B;border-radius:16px"><p style="font-size:24px;font-weight:700;color:#FAF8F3"><span style="font-family:Rubik, Arial, sans-serif;font-size:56px;font-weight:800;color:#F7DC5C">4</span></p><h3 style="font-family:Rubik, Arial, sans-serif;font-size:36px;font-weight:700;line-height:1.15;color:#FAF8F3">Rehearse with a timer</h3><p style="font-size:26px;line-height:1.4;color:#DCE3EA">Out loud, standing, at least three times. Cut until it fits.</p></div></div>
+<p style="font-size:28px;line-height:1.4;color:#4A5568;">Use everything from the last sessions: <b style='color:#15233B'>your hypotheses, your experiments and your interviews</b> are your traction.</p>
+
+</section>
+
+<section id="close" data-transition="fade" style="background:#15233B;color:#FAF8F3;font-family:'Nunito Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:32px;align-items:center">
+
+<p style="font-family:Caveat, 'Brush Script MT', cursive;font-size:120px;line-height:1.1;color:#F7DC5C;text-align:center;width:1500px">Make it easy for them.</p>
+<p style="font-family:Rubik, Arial, sans-serif;font-size:56px;font-weight:500;text-align:center">Then ask for the second meeting.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#BFD0DD;text-align:center">ICAI · Innovation &amp; Entrepreneurship · The elevator pitch</p>
+
+</section>
+</div>
+<div id="bar"><span id="count"></span><button id="prev" aria-label="Previous">‹</button><button id="next" aria-label="Next">›</button><button id="fs" aria-label="Full screen">⛶</button></div>
+<script>
+const stage=document.getElementById('stage');
+const S=[...stage.children];
+let i=0, step=0;
+function fit(){const k=Math.min(innerWidth/1920,innerHeight/1080);const x=(innerWidth-1920*k)/2,y=(innerHeight-1080*k)/2;stage.style.transform=`translate(${x}px,${y}px) scale(${k})`;}
+function builds(s){const els=[...s.querySelectorAll('[data-build-in]')];const ord=[...new Set(els.map(e=>+(e.dataset.buildIn.split(' ')[1]||1)))].sort((a,b)=>a-b);return {els,ord};}
+function show(n,all){S.forEach(s=>s.classList.remove('on'));i=Math.max(0,Math.min(S.length-1,n));const s=S[i];s.classList.add('on');const b=builds(s);step=all?b.ord.length:0;paint(b);document.getElementById('count').textContent=(i+1)+' / '+S.length;history.replaceState(null,'','#'+(i+1));}
+function paint(b){b.els.forEach(e=>{const o=+(e.dataset.buildIn.split(' ')[1]||1);e.classList.toggle('hid',b.ord.indexOf(o)>=step);});}
+function next(){const b=builds(S[i]);if(step<b.ord.length){step++;paint(b);}else if(i<S.length-1)show(i+1,false);}
+function prev(){if(i>0)show(i-1,true);}
+addEventListener('keydown',e=>{if(['ArrowRight','ArrowDown',' ','PageDown','Enter'].includes(e.key)){e.preventDefault();next();}else if(['ArrowLeft','ArrowUp','PageUp','Backspace'].includes(e.key)){e.preventDefault();prev();}else if(e.key==='f')toggleFs();else if(e.key==='Home')show(0,false);else if(e.key==='End')show(S.length-1,true);});
+document.addEventListener('click',e=>{const g=e.target.closest('[data-goto]');if(!g)return;e.stopPropagation();const k=S.findIndex(s=>s.id===g.dataset.goto);if(k>=0)show(k,true);},true);
+stage.addEventListener('click',next);
+document.getElementById('next').onclick=next;document.getElementById('prev').onclick=prev;
+function toggleFs(){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();}
+document.getElementById('fs').onclick=toggleFs;
+addEventListener('resize',fit);fit();
+show((parseInt(location.hash.slice(1))||1)-1,false);
+</script></body></html>
